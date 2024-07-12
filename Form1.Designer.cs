@@ -29,11 +29,9 @@
         private void InitializeComponent()
         {
             button1 = new Button();
-            label1 = new Label();
             progressBar = new ProgressBar();
             Path = new TextBox();
             imgTransfer = new Button();
-            logo = new PictureBox();
             checkBox1 = new CheckBox();
             comboBox1 = new ComboBox();
             Choose = new Button();
@@ -43,7 +41,6 @@
             label4 = new Label();
             comboBox2 = new ComboBox();
             label5 = new Label();
-            ((System.ComponentModel.ISupportInitialize)logo).BeginInit();
             SuspendLayout();
             // 
             // button1
@@ -56,19 +53,14 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
-            // label1
-            // 
-            label1.Location = new Point(0, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(100, 23);
-            label1.TabIndex = 0;
-            // 
             // progressBar
             // 
+            progressBar.ForeColor = Color.IndianRed;
             progressBar.Location = new Point(37, 317);
             progressBar.Name = "progressBar";
             progressBar.Size = new Size(410, 23);
             progressBar.TabIndex = 1;
+            progressBar.Visible = false;
             // 
             // Path
             // 
@@ -89,17 +81,11 @@
             imgTransfer.UseVisualStyleBackColor = false;
             imgTransfer.Click += imgTransfer_Click;
             // 
-            // logo
-            // 
-            logo.Location = new Point(12, 12);
-            logo.Name = "logo";
-            logo.Size = new Size(200, 71);
-            logo.TabIndex = 4;
-            logo.TabStop = false;
-            // 
             // checkBox1
             // 
             checkBox1.AutoSize = true;
+            checkBox1.Checked = true;
+            checkBox1.CheckState = CheckState.Checked;
             checkBox1.Location = new Point(37, 184);
             checkBox1.Name = "checkBox1";
             checkBox1.Size = new Size(266, 19);
@@ -111,6 +97,7 @@
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "JPG", "PNG", "JPEG" });
             comboBox1.Location = new Point(106, 135);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(50, 23);
@@ -124,6 +111,7 @@
             Choose.TabIndex = 7;
             Choose.Text = "Vybrat složku";
             Choose.UseVisualStyleBackColor = true;
+            Choose.Visible = false;
             Choose.Click += Choose_Click;
             // 
             // FolderPath
@@ -132,12 +120,13 @@
             FolderPath.Name = "FolderPath";
             FolderPath.Size = new Size(317, 23);
             FolderPath.TabIndex = 8;
+            FolderPath.Visible = false;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Arial Black", 18F, FontStyle.Bold);
-            label2.Location = new Point(218, 28);
+            label2.Location = new Point(115, 36);
             label2.Name = "label2";
             label2.Size = new Size(256, 33);
             label2.TabIndex = 9;
@@ -157,7 +146,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 12F);
-            label4.Location = new Point(218, 137);
+            label4.Location = new Point(218, 135);
             label4.Name = "label4";
             label4.Size = new Size(115, 21);
             label4.TabIndex = 11;
@@ -166,7 +155,8 @@
             // comboBox2
             // 
             comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(339, 135);
+            comboBox2.Items.AddRange(new object[] { "100", "80", "75", "50", "25" });
+            comboBox2.Location = new Point(339, 137);
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(55, 23);
             comboBox2.TabIndex = 12;
@@ -185,6 +175,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.LightSteelBlue;
             ClientSize = new Size(484, 361);
             Controls.Add(label5);
             Controls.Add(comboBox2);
@@ -195,30 +186,32 @@
             Controls.Add(Choose);
             Controls.Add(comboBox1);
             Controls.Add(checkBox1);
-            Controls.Add(logo);
             Controls.Add(imgTransfer);
             Controls.Add(Path);
             Controls.Add(progressBar);
-            Controls.Add(label1);
             Controls.Add(button1);
             MaximizeBox = false;
             MaximumSize = new Size(500, 400);
             MinimumSize = new Size(500, 400);
             Name = "Form1";
             Text = "Převodník obrázků";
-            ((System.ComponentModel.ISupportInitialize)logo).EndInit();
             ResumeLayout(false);
             PerformLayout();
+        }
+
+        private void SetupDragAndDrop()
+        {
+            this.AllowDrop = true;
+            this.DragEnter += new DragEventHandler(Form1_DragEnter);
+            this.DragDrop += new DragEventHandler(Form1_DragDrop);
         }
 
         #endregion
 
         private Button button1;
-        private Label label1;
         private ProgressBar progressBar;
         private TextBox Path;
         private Button imgTransfer;
-        private PictureBox logo;
         private CheckBox checkBox1;
         private ComboBox comboBox1;
         private Button Choose;

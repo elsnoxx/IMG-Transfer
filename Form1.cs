@@ -3,6 +3,7 @@ using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace IMGTransefere
 {
@@ -12,39 +13,15 @@ namespace IMGTransefere
         {
             InitializeComponent();
 
-            // Nastavení vlastností vyberu checkBox1
-            checkBox1.Checked = true;
-
-            // Nastavení vlastností vyberu comboBox1
-            comboBox1.Items.Add("JPG");
-            comboBox1.Items.Add("PNG");
-            comboBox1.Items.Add("JPEG");
+            // Nastavení výchozích hodnot pro ComboBoxy
+            comboBox2.SelectedIndex = 0;
             comboBox1.SelectedIndex = 0;
 
-            // Nastavení vlastností vyberu comboBox2
-            comboBox2.Items.Add("100");
-            comboBox2.Items.Add("80");
-            comboBox2.Items.Add("75");
-            comboBox2.Items.Add("50");
-            comboBox2.Items.Add("25");
-            comboBox2.SelectedIndex = 0;
-
-            // Nastavení vlastností ProgressBar
-            progressBar.Minimum = 0;
-            progressBar.Maximum = 100;
-            progressBar.Value = 0;
-            progressBar.Visible = true;
-
-
-            FolderPath.Visible = false;
-            Choose.Visible = false;
-
-            // Příklad načtení a nastavení obrázku z disku
-            logo.Image = Image.FromFile("logoSmall1.png");
-
-
+            // Povolí drag and drop na formuláři
+            SetupDragAndDrop();
         }
 
+        // Handler pro tlačítko výběru souboru
         private void button1_Click(object sender, EventArgs e)
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
@@ -58,107 +35,178 @@ namespace IMGTransefere
                 {
                     // Zde můžete pracovat se vybraným souborem
                     string selectedFileName = openFileDialog.FileName;
-                    // Například vypište cestu k souboru do konzole
-
+                    // Zobrazení cesty k souboru v TextBoxu
                     Path.Text = selectedFileName;
                 }
             }
         }
 
+        // Handler pro událost DragEnter - určuje, zda lze přetahovaný objekt zpracovat
+        private void Form1_DragEnter(object sender, DragEventArgs e)
+        {
+            // Kontrola, zda přetažené data jsou soubory
+            if (e.Data.GetDataPresent(DataFormats.FileDrop))
+            {
+                e.Effect = DragDropEffects.Copy;
+            }
+            else
+            {
+                e.Effect = DragDropEffects.None;
+            }
+        }
+
+        // Handler pro událost DragDrop - zpracovává přetažené soubory
+        private void Form1_DragDrop(object sender, DragEventArgs e)
+        {
+            // Získání přetažených souborů
+            if (e.Data.GetDataPresent(DataFormats.FileDrop))
+            {
+                string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
+
+                // Načtení první cesty souboru do TextBoxu nebo jiné logiky
+                if (files.Length > 0)
+                {
+                    string filePath = files[0];
+                    Path.Text = filePath;
+                }
+            }
+        }
+
+        // Metoda pro aktualizaci progress baru
+        private void ProgressBar(int length)
+        {
+            for (int i = 0; i < length; i++)
+            {
+                if (progressBar.Value == 100)
+                {
+                    break;
+                }
+                progressBar.Value += 1;
+                Thread.Sleep(20); // Pauza pro simulaci práce
+            }
+        }
+
+        // Handler pro tlačítko pro převod obrázku
         private void imgTransfer_Click(object sender, EventArgs e)
         {
-            if (System.IO.Path.GetExtension(Path.Text).Equals("." + comboBox1.Text, StringComparison.OrdinalIgnoreCase))
+            // Validace vstupních údajů
+            if (!ValidateInput())
             {
-                MessageBox.Show("Vybrali jste stejný formát jako je již v obrázku. Vyberte prosím jiný formát.");
-                return;
-            }
-
-            if (Path.Text == "")
-            {
-                MessageBox.Show("Vyberte soubor k převodu.");
-                return;
-            }
-            if (FolderPath.Text == "" && !checkBox1.Checked)
-            {
-                MessageBox.Show("Vyberte složku kam chcete soubor uložit.");
                 return;
             }
 
             progressBar.Visible = true;
-            string vybranaPolozka = comboBox1.SelectedItem.ToString();
+            progressBar.Value = 10;
 
-            progressBar.Value += 10;
+            try
+            {
+                // Získání výstupního formátu a kvality
+                string outputFormat = comboBox1.SelectedItem.ToString().ToLower();
+                long quality = long.Parse(comboBox2.Text);
 
-            // Načtení obrázku
-            Bitmap originalImage = new Bitmap(Path.Text);
-            progressBar.Value += 10;
+                // Načtení obrázku
+                Bitmap originalImage = new Bitmap(Path.Text);
+                ProgressBar(10);
 
-            // Komprimace obrázku
+                // Komprimace obrázku
+                MemoryStream memoryStream = CompressImage(originalImage, quality);
+                ProgressBar(10);
+
+                // Získání cesty k výstupnímu souboru
+                string outputFilePath = GetOutputFilePath(outputFormat);
+                ProgressBar(10);
+
+                // Uložení komprimovaného obrázku
+                SaveCompressedImage(memoryStream, outputFilePath);
+                ProgressBar(70);
+            }
+            catch (Exception ex)
+            {
+                // Zobrazení chybové zprávy
+                MessageBox.Show("Nastala chyba při převodu: " + ex.Message);
+            }
+            finally
+            {
+                progressBar.Visible = false;
+                progressBar.Value = 0;
+            }
+        }
+
+        // Metoda pro validaci vstupních údajů
+        private bool ValidateInput()
+        {
+            if (System.IO.Path.GetExtension(Path.Text).Equals("." + comboBox1.Text, StringComparison.OrdinalIgnoreCase))
+            {
+                MessageBox.Show("Vybrali jste stejný formát jako je již v obrázku. Vyberte prosím jiný formát.");
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(Path.Text))
+            {
+                MessageBox.Show("Vyberte soubor k převodu.");
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(FolderPath.Text) && !checkBox1.Checked)
+            {
+                MessageBox.Show("Vyberte složku kam chcete soubor uložit.");
+                return false;
+            }
+
+            if (string.IsNullOrEmpty(comboBox1.Text))
+            {
+                MessageBox.Show("Vyberte formát pro uložení.");
+                return false;
+            }
+
+            if (string.IsNullOrEmpty(comboBox2.Text))
+            {
+                MessageBox.Show("Vyberte kvalitu pro uložení.");
+                return false;
+            }
+
+            return true;
+        }
+
+        // Metoda pro kompresi obrázku
+        private MemoryStream CompressImage(Bitmap originalImage, long quality)
+        {
             EncoderParameters encoderParameters = new EncoderParameters(1);
-            encoderParameters.Param[0] = new EncoderParameter(Encoder.Quality, long.Parse(comboBox2.Text));
-            progressBar.Value += 10;
+            encoderParameters.Param[0] = new EncoderParameter(Encoder.Quality, quality);
 
             ImageCodecInfo jpgEncoder = GetEncoder(ImageFormat.Jpeg);
             MemoryStream memoryStream = new MemoryStream();
 
             originalImage.Save(memoryStream, jpgEncoder, encoderParameters);
-            progressBar.Value += 10;
-
-            string compressedImagePath = "";
-            // Nový název pro komprimovaný obrázek
-            if (checkBox1.Checked)
-            {
-                compressedImagePath = System.IO.Path.Combine(System.IO.Path.GetDirectoryName(Path.Text) + "\\" + System.IO.Path.GetFileNameWithoutExtension(Path.Text) + "." + comboBox1.Text.ToLower());
-                progressBar.Value += 10;
-            }
-            else
-            {
-                compressedImagePath = System.IO.Path.Combine(System.IO.Path.GetDirectoryName(FolderPath.Text) + "\\" + System.IO.Path.GetFileNameWithoutExtension(Path.Text) + "." + comboBox1.Text.ToLower());
-                progressBar.Value += 10;
-            }
-
-
-
-
-            // Uložení komprimovaného obrázku do výstupní složky
-            File.WriteAllBytes(compressedImagePath, memoryStream.ToArray());
-            for (int i = 0; i <= 40; i++)
-            {
-                progressBar.Value++;
-            }
-
-
-            progressBar.Visible = false;
-            progressBar.Value = 0;
+            return memoryStream;
         }
 
+        // Metoda pro získání cesty k výstupnímu souboru
+        private string GetOutputFilePath(string outputFormat)
+        {
+            string directory = checkBox1.Checked ? System.IO.Path.GetDirectoryName(Path.Text) : FolderPath.Text;
+            return System.IO.Path.Combine(directory, System.IO.Path.GetFileNameWithoutExtension(Path.Text) + "." + outputFormat);
+        }
+
+        // Metoda pro uložení komprimovaného obrázku
+        private void SaveCompressedImage(MemoryStream memoryStream, string outputPath)
+        {
+            File.WriteAllBytes(outputPath, memoryStream.ToArray());
+        }
+
+        // Metoda pro získání encoderu pro daný formát
         private ImageCodecInfo GetEncoder(ImageFormat format)
         {
-            ImageCodecInfo[] codecs = ImageCodecInfo.GetImageDecoders();
-            foreach (ImageCodecInfo codec in codecs)
-            {
-                if (codec.FormatID == format.Guid)
-                {
-                    return codec;
-                }
-            }
-            return null;
+            return Array.Find(ImageCodecInfo.GetImageDecoders(), codec => codec.FormatID == format.Guid);
         }
 
+        // Handler pro změnu stavu checkBoxu - zobrazení/skrytí výběru složky
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if (Choose.Visible == true)
-            {
-                FolderPath.Visible = false;
-                Choose.Visible = false;
-            }
-            else
-            {
-                FolderPath.Visible = true;
-                Choose.Visible = true;
-            }
+            FolderPath.Visible = Choose.Visible = !checkBox1.Checked;
         }
 
+        // Handler pro tlačítko výběru složky
         private void Choose_Click(object sender, EventArgs e)
         {
             using (FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog())
@@ -168,11 +216,7 @@ namespace IMGTransefere
 
                 if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
                 {
-                    // Získání vybrané složky
-                    string selectedFolderPath = folderBrowserDialog.SelectedPath;
-
-                    // Nastavení cesty složky do FolderPath.Text
-                    FolderPath.Text = selectedFolderPath;
+                    FolderPath.Text = folderBrowserDialog.SelectedPath;
                 }
             }
         }
