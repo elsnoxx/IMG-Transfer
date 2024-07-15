@@ -19,9 +19,8 @@ Tato aplikace umožňuje uživatelům komprimovat obrázky do formátů JPEG neb
 
 ### Instalace
 
-1. Stažení aplikace: Stažte si instalační balíček nebo celý projekt z GitHubu.
-2. Rozbalení: Rozbalte soubory aplikace do vybraného adresáře na vašem počítači.
-3. Spuštění: Spusťte aplikaci dvojitým kliknutím na soubor `IMGTransfer.exe`.
+1. Stažení aplikace: Stažte si instalační balíček z následujícího odkazu: [Stáhnout IMGTransfer Setup](/IMG-Transfer/Release/IMG-Transfer.msi).
+2. Spuštění: Spusťte aplikaci dvojitým kliknutím na soubor `IMG-Transfer.msi`.
 
 ### Použití
 
@@ -32,7 +31,7 @@ Tato aplikace umožňuje uživatelům komprimovat obrázky do formátů JPEG neb
 
 ## Podpora a kontakt
 
-V případě potíží nebo dotazů kontaktujte náš tým podpory na support@imgtransfer.com nebo navštivte naše webové stránky [www.imgtransfer.com](http://www.imgtransfer.com).
+V případě potíží nebo dotazů kontaktujte náš tým podpory na ficek.risa@gmail.com nebo navštivte naše webové stránky [www.elsnoxx.github.io](https://elsnoxx.github.io/contact.html).
 
 ---
-© 2024 IMGTransfer. Všechna práva vyhrazena.
+© 2024 Richard Ficek. Všechna práva vyhrazena.
