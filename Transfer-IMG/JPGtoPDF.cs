@@ -16,6 +16,7 @@ namespace Transfer_IMG
         public JPGtoPDF()
         {
             InitializeComponent();
+            SetupDragAndDrop();
         }
 
         // Handler pro tlačítko výběru souboru
@@ -67,6 +68,11 @@ namespace Transfer_IMG
                     Path.Text = filePath;
                 }
             }
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            FolderPath.Visible = Choose.Visible = !checkBox1.Checked;
         }
 
         private void Choose_Click(object sender, EventArgs e)

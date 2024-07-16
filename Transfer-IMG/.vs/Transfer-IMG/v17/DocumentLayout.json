@@ -1,87 +1,12 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\admin\\Documents\\GitHub\\IMG-Transfer\\Transfer-IMG\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{0B37B1F4-AFF0-4084-BD88-D7FBEF20CD5C}|Transfer-IMG.csproj|c:\\users\\admin\\documents\\github\\img-transfer\\transfer-img\\jpgtopdf.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0B37B1F4-AFF0-4084-BD88-D7FBEF20CD5C}|Transfer-IMG.csproj|solutionrelative:jpgtopdf.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0B37B1F4-AFF0-4084-BD88-D7FBEF20CD5C}|Transfer-IMG.csproj|c:\\users\\admin\\documents\\github\\img-transfer\\transfer-img\\jpgtopdf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0B37B1F4-AFF0-4084-BD88-D7FBEF20CD5C}|Transfer-IMG.csproj|solutionrelative:jpgtopdf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0B37B1F4-AFF0-4084-BD88-D7FBEF20CD5C}|Transfer-IMG.csproj|c:\\users\\admin\\documents\\github\\img-transfer\\transfer-img\\imgtransfer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0B37B1F4-AFF0-4084-BD88-D7FBEF20CD5C}|Transfer-IMG.csproj|solutionrelative:imgtransfer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0B37B1F4-AFF0-4084-BD88-D7FBEF20CD5C}|Transfer-IMG.csproj|c:\\users\\admin\\documents\\github\\img-transfer\\transfer-img\\jpgtopdf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0B37B1F4-AFF0-4084-BD88-D7FBEF20CD5C}|Transfer-IMG.csproj|solutionrelative:jpgtopdf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "WorkspaceRootPath": "C:\\Users\\ficek\\Documents\\GitHub\\IMG-Transfer\\Transfer-IMG\\",
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "JPGtoPDF.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\IMG-Transfer\\Transfer-IMG\\JPGtoPDF.Designer.cs",
-              "RelativeDocumentMoniker": "JPGtoPDF.Designer.cs",
-              "ToolTip": "C:\\Users\\admin\\Documents\\GitHub\\IMG-Transfer\\Transfer-IMG\\JPGtoPDF.Designer.cs",
-              "RelativeToolTip": "JPGtoPDF.Designer.cs",
-              "ViewState": "AQIAACgAAAAAAAAAAAAUwDoAAAAvAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-16T11:51:17.841Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IMGTransfer.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\IMG-Transfer\\Transfer-IMG\\IMGTransfer.cs",
-              "RelativeDocumentMoniker": "IMGTransfer.cs",
-              "ToolTip": "C:\\Users\\admin\\Documents\\GitHub\\IMG-Transfer\\Transfer-IMG\\IMGTransfer.cs",
-              "RelativeToolTip": "IMGTransfer.cs",
-              "ViewState": "AQIAANUAAAAAAAAAAAAkwOIAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-16T11:49:53.312Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "JPGtoPDF.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\IMG-Transfer\\Transfer-IMG\\JPGtoPDF.cs",
-              "RelativeDocumentMoniker": "JPGtoPDF.cs",
-              "ToolTip": "C:\\Users\\admin\\Documents\\GitHub\\IMG-Transfer\\Transfer-IMG\\JPGtoPDF.cs",
-              "RelativeToolTip": "JPGtoPDF.cs",
-              "ViewState": "AQIAAEYAAAAAAAAAAADwv1YAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-16T11:49:48.699Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "JPGtoPDF.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\IMG-Transfer\\Transfer-IMG\\JPGtoPDF.cs",
-              "RelativeDocumentMoniker": "JPGtoPDF.cs",
-              "ToolTip": "C:\\Users\\admin\\Documents\\GitHub\\IMG-Transfer\\Transfer-IMG\\JPGtoPDF.cs [Design]",
-              "RelativeToolTip": "JPGtoPDF.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-16T11:49:18.68Z",
-              "EditorCaption": " [Design]"
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }
