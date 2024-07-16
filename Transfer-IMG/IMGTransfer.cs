@@ -10,18 +10,14 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolTip;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Transfer_IMG
 {
-    public partial class Form1 : Form
+    public partial class IMGTransfer : UserControl
     {
-        public Form1()
+        public IMGTransfer()
         {
             InitializeComponent();
-
             // Nastavení výchozích hodnot pro ComboBoxy
             comboBox2.SelectedIndex = 0;
             comboBox1.SelectedIndex = 0;
@@ -32,7 +28,7 @@ namespace Transfer_IMG
 
 
         // Handler pro tlačítko výběru souboru
-        private void button1_Click_1(object sender, EventArgs e)
+        private void openFile_Click(object sender, EventArgs e)
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
@@ -99,7 +95,7 @@ namespace Transfer_IMG
         }
 
         // Handler pro tlačítko pro převod obrázku
-        private void imgTransfer_Click_1(object sender, EventArgs e)
+        private void transfer_Click(object sender, EventArgs e)
         {
             // Validace vstupních údajů
             if (!ValidateInput())
@@ -222,17 +218,17 @@ namespace Transfer_IMG
         }
 
         // Handler pro změnu stavu checkBoxu - zobrazení/skrytí výběru složky
-        private void checkBox1_CheckedChanged_1(object sender, EventArgs e)
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             FolderPath.Visible = Choose.Visible = !checkBox1.Checked;
         }
 
         // Handler pro tlačítko výběru složky
-        private void Choose_Click_1(object sender, EventArgs e)
+        private void Choose_Click(object sender, EventArgs e)
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
-                
+
                 openFileDialog.ValidateNames = false;
                 openFileDialog.CheckFileExists = false;
                 openFileDialog.CheckPathExists = true;
@@ -244,7 +240,5 @@ namespace Transfer_IMG
                 }
             }
         }
-
-        
     }
 }
