@@ -8,6 +8,8 @@ using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PdfSharp.Drawing;
+using PdfSharp.Pdf;
 
 namespace Transfer_IMG
 {
@@ -91,5 +93,49 @@ namespace Transfer_IMG
                 }
             }
         }
+
+        private void btnPDFGen_Click(object sender, EventArgs e)
+        {
+            string imagePath = Path.Text;
+            if (string.IsNullOrEmpty(imagePath))
+            {
+                MessageBox.Show("Please select an image file.");
+                return;
+            }
+
+            string pdfPath = "";
+            if (!checkBox1.Checked)
+            {
+                pdfPath = FolderPath.Text + "\\" +System.IO.Path.GetFileNameWithoutExtension(imagePath) + ".pdf";
+            }
+            else 
+            {
+                pdfPath = System.IO.Path.ChangeExtension(imagePath, ".pdf");
+            }
+
+
+            try
+            {
+                using (PdfDocument document = new PdfDocument())
+                {
+                    PdfPage page = document.AddPage();
+                    XGraphics gfx = XGraphics.FromPdfPage(page);
+                    XImage img = XImage.FromFile(imagePath);
+
+                    double x = (page.Width - img.PixelWidth * 72 / img.HorizontalResolution) / 2;
+                    double y = (page.Height - img.PixelHeight * 72 / img.VerticalResolution) / 2;
+
+                    gfx.DrawImage(img, x, y, img.PixelWidth * 72 / img.HorizontalResolution, img.PixelHeight * 72 / img.VerticalResolution);
+
+                    document.Save(pdfPath);
+                }
+                MessageBox.Show("PDF generated successfully: " + pdfPath);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error generating PDF: " + ex.Message);
+            }
+        }
+
     }
 }

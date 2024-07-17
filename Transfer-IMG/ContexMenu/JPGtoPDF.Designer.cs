@@ -36,6 +36,7 @@ namespace Transfer_IMG
             this.FolderPath = new System.Windows.Forms.TextBox();
             this.Path = new System.Windows.Forms.TextBox();
             this.openFile = new System.Windows.Forms.Button();
+            this.btnPDFGen = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label4
@@ -115,10 +116,21 @@ namespace Transfer_IMG
             this.openFile.UseVisualStyleBackColor = false;
             this.openFile.Click += new System.EventHandler(this.openFile_Click);
             // 
+            // btnPDFGen
+            // 
+            this.btnPDFGen.Location = new System.Drawing.Point(312, 406);
+            this.btnPDFGen.Name = "btnPDFGen";
+            this.btnPDFGen.Size = new System.Drawing.Size(121, 23);
+            this.btnPDFGen.TabIndex = 33;
+            this.btnPDFGen.Text = "Generovat PDF";
+            this.btnPDFGen.UseVisualStyleBackColor = true;
+            this.btnPDFGen.Click += new System.EventHandler(this.btnPDFGen_Click);
+            // 
             // JPGtoPDF
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnPDFGen);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.Choose);
@@ -147,5 +159,6 @@ namespace Transfer_IMG
         private TextBox FolderPath;
         private TextBox Path;
         private Button openFile;
+        private Button btnPDFGen;
     }
 }
