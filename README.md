@@ -35,6 +35,7 @@ V případě potíží nebo dotazů kontaktujte náš tým podpory na ficek.risa
 
 ## Work-in progress
 
+- Upravit velikost ddl balicku
 - Lepší UI a nový design
 - Přidání převodu JPG to PDF
 - Přidání převodu PDF to JPG
