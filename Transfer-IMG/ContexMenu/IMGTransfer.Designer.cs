@@ -51,7 +51,7 @@ namespace Transfer_IMG
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Brown;
-            this.label5.Location = new System.Drawing.Point(282, 389);
+            this.label5.Location = new System.Drawing.Point(297, 389);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(140, 18);
             this.label5.TabIndex = 27;
@@ -60,9 +60,12 @@ namespace Transfer_IMG
             // 
             // label4
             // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(204, 27);
+            this.label4.Location = new System.Drawing.Point(226, 21);
             this.label4.Name = "label4";
             this.label4.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label4.Size = new System.Drawing.Size(274, 33);
@@ -90,14 +93,16 @@ namespace Transfer_IMG
             "JPG",
             "PNG",
             "JPEG"});
-            this.comboBox1.Location = new System.Drawing.Point(159, 192);
+            this.comboBox1.Location = new System.Drawing.Point(159, 193);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(64, 21);
             this.comboBox1.TabIndex = 24;
             // 
             // transfer
             // 
-            this.transfer.AutoSize = true;
+            this.transfer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.transfer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.transfer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.transfer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -115,7 +120,7 @@ namespace Transfer_IMG
             this.checkBox1.Checked = true;
             this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.checkBox1.Location = new System.Drawing.Point(48, 249);
+            this.checkBox1.Location = new System.Drawing.Point(42, 224);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(331, 22);
             this.checkBox1.TabIndex = 22;
@@ -137,7 +142,7 @@ namespace Transfer_IMG
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label2.Location = new System.Drawing.Point(45, 164);
+            this.label2.Location = new System.Drawing.Point(39, 164);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(108, 18);
             this.label2.TabIndex = 20;
@@ -147,7 +152,7 @@ namespace Transfer_IMG
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label1.Location = new System.Drawing.Point(45, 192);
+            this.label1.Location = new System.Drawing.Point(39, 192);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(56, 18);
             this.label1.TabIndex = 19;
@@ -159,7 +164,7 @@ namespace Transfer_IMG
             this.Choose.BackColor = System.Drawing.Color.Moccasin;
             this.Choose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Choose.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.Choose.Location = new System.Drawing.Point(593, 286);
+            this.Choose.Location = new System.Drawing.Point(589, 249);
             this.Choose.Name = "Choose";
             this.Choose.Size = new System.Drawing.Size(111, 30);
             this.Choose.TabIndex = 18;
@@ -170,18 +175,21 @@ namespace Transfer_IMG
             // 
             // FolderPath
             // 
-            this.FolderPath.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.FolderPath.Location = new System.Drawing.Point(42, 290);
+            this.FolderPath.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.FolderPath.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.FolderPath.Location = new System.Drawing.Point(42, 249);
             this.FolderPath.Name = "FolderPath";
-            this.FolderPath.Size = new System.Drawing.Size(484, 24);
+            this.FolderPath.Size = new System.Drawing.Size(484, 30);
             this.FolderPath.TabIndex = 17;
             this.FolderPath.Visible = false;
             // 
             // Path
             // 
+            this.Path.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Path.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Path.Location = new System.Drawing.Point(42, 120);
             this.Path.Name = "Path";
-            this.Path.Size = new System.Drawing.Size(484, 20);
+            this.Path.Size = new System.Drawing.Size(484, 30);
             this.Path.TabIndex = 16;
             // 
             // progressBar1
@@ -196,11 +204,12 @@ namespace Transfer_IMG
             // 
             this.openFile.BackColor = System.Drawing.Color.Moccasin;
             this.openFile.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.openFile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.openFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.openFile.ForeColor = System.Drawing.Color.Black;
-            this.openFile.Location = new System.Drawing.Point(593, 114);
+            this.openFile.Location = new System.Drawing.Point(589, 120);
             this.openFile.Name = "openFile";
-            this.openFile.Size = new System.Drawing.Size(107, 28);
+            this.openFile.Size = new System.Drawing.Size(111, 30);
             this.openFile.TabIndex = 14;
             this.openFile.Text = "Otevřít";
             this.openFile.UseVisualStyleBackColor = false;

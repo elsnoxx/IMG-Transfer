@@ -32,6 +32,7 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.mainPanel = new System.Windows.Forms.Panel();
             this.menuPanel = new System.Windows.Forms.Panel();
+            this.btnHome = new System.Windows.Forms.Button();
             this.PDFtoJPG = new System.Windows.Forms.Button();
             this.JPGtoPDF = new System.Windows.Forms.Button();
             this.btnTransferIMG = new System.Windows.Forms.Button();
@@ -57,6 +58,7 @@
             // menuPanel
             // 
             this.menuPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.menuPanel.Controls.Add(this.btnHome);
             this.menuPanel.Controls.Add(this.PDFtoJPG);
             this.menuPanel.Controls.Add(this.JPGtoPDF);
             this.menuPanel.Controls.Add(this.btnTransferIMG);
@@ -65,14 +67,32 @@
             this.menuPanel.Size = new System.Drawing.Size(176, 528);
             this.menuPanel.TabIndex = 2;
             // 
+            // btnHome
+            // 
+            this.btnHome.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHome.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnHome.FlatAppearance.BorderSize = 0;
+            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
+            this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHome.Location = new System.Drawing.Point(0, 0);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(176, 40);
+            this.btnHome.TabIndex = 3;
+            this.btnHome.Text = "Home";
+            this.btnHome.UseVisualStyleBackColor = false;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            // 
             // PDFtoJPG
             // 
             this.PDFtoJPG.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.PDFtoJPG.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PDFtoJPG.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.PDFtoJPG.Location = new System.Drawing.Point(10, 84);
+            this.PDFtoJPG.Location = new System.Drawing.Point(3, 127);
             this.PDFtoJPG.Name = "PDFtoJPG";
-            this.PDFtoJPG.Size = new System.Drawing.Size(159, 33);
+            this.PDFtoJPG.Size = new System.Drawing.Size(170, 33);
             this.PDFtoJPG.TabIndex = 2;
             this.PDFtoJPG.Text = "PDF to JPG";
             this.PDFtoJPG.UseVisualStyleBackColor = false;
@@ -83,9 +103,9 @@
             this.JPGtoPDF.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.JPGtoPDF.Cursor = System.Windows.Forms.Cursors.Hand;
             this.JPGtoPDF.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.JPGtoPDF.Location = new System.Drawing.Point(10, 45);
+            this.JPGtoPDF.Location = new System.Drawing.Point(3, 88);
             this.JPGtoPDF.Name = "JPGtoPDF";
-            this.JPGtoPDF.Size = new System.Drawing.Size(159, 33);
+            this.JPGtoPDF.Size = new System.Drawing.Size(170, 33);
             this.JPGtoPDF.TabIndex = 1;
             this.JPGtoPDF.Text = "JPG to PDF";
             this.JPGtoPDF.UseVisualStyleBackColor = false;
@@ -96,9 +116,9 @@
             this.btnTransferIMG.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.btnTransferIMG.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTransferIMG.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.btnTransferIMG.Location = new System.Drawing.Point(10, 6);
+            this.btnTransferIMG.Location = new System.Drawing.Point(3, 49);
             this.btnTransferIMG.Name = "btnTransferIMG";
-            this.btnTransferIMG.Size = new System.Drawing.Size(159, 33);
+            this.btnTransferIMG.Size = new System.Drawing.Size(170, 33);
             this.btnTransferIMG.TabIndex = 0;
             this.btnTransferIMG.Text = "Převod obrázku";
             this.btnTransferIMG.UseVisualStyleBackColor = false;
@@ -113,6 +133,8 @@
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(952, 591);
+            this.MinimumSize = new System.Drawing.Size(952, 591);
             this.Name = "MainWindow";
             this.Text = "Main Window";
             this.menuPanel.ResumeLayout(false);
@@ -128,5 +150,6 @@
         private System.Windows.Forms.Button btnTransferIMG;
         private System.Windows.Forms.Button JPGtoPDF;
         private System.Windows.Forms.Button PDFtoJPG;
+        private System.Windows.Forms.Button btnHome;
     }
 }

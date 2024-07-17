@@ -15,21 +15,31 @@ namespace Transfer_IMG
         public MainWindow()
         {
             InitializeComponent();
+            LoadControl(new Home());
         }
 
         private void btnTransferIMG_Click(object sender, EventArgs e)
         {
+            Highlight(sender);
             LoadControl(new IMGTransfer());
         }
 
         private void JPGtoPDF_Click(object sender, EventArgs e)
         {
+            Highlight(sender);
             LoadControl(new JPGtoPDF());
         }
 
         private void PDFtoJPG_Click(object sender, EventArgs e)
         {
+            Highlight(sender);
             LoadControl(new PDFtoJPG());
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            Highlight(sender);
+            LoadControl(new Home());
         }
 
         private void LoadControl(UserControl userControl)
@@ -38,5 +48,22 @@ namespace Transfer_IMG
             userControl.Dock = DockStyle.Fill;
             mainPanel.Controls.Add(userControl);
         }
+
+        private void Highlight(object sender)
+        {
+            // Reset color of all buttons
+            btnTransferIMG.BackColor = SystemColors.InactiveBorder;
+            JPGtoPDF.BackColor = SystemColors.InactiveBorder;
+            PDFtoJPG.BackColor = SystemColors.InactiveBorder;
+            btnHome.BackColor = SystemColors.InactiveBorder;
+
+            // Highlight the clicked button
+            Button clickedButton = sender as Button;
+            if (clickedButton != null)
+            {
+                clickedButton.BackColor = Color.Bisque;
+            }
+        }
+
     }
 }

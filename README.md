@@ -33,5 +33,15 @@ Tato aplikace umožňuje uživatelům komprimovat obrázky do formátů JPEG neb
 
 V případě potíží nebo dotazů kontaktujte náš tým podpory na ficek.risa@gmail.com nebo navštivte naše webové stránky [www.elsnoxx.github.io](https://elsnoxx.github.io/contact.html).
 
+## Work-in progress
+
+- Lepší UI a nový design
+- Přidání převodu JPG to PDF
+- Přidání převodu PDF to JPG
+- Rošiřitelnost okna, zmena velikosti
+- Tlačítko na zvětšení texu
+- Dokumentace aplikace
+- Navod na použití aplikace
+
 ---
 © 2024 Richard Ficek. Všechna práva vyhrazena.

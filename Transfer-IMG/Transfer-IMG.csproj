@@ -54,16 +54,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IMGTransfer.cs">
+    <Compile Include="ContexMenu\Home.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="IMGTransfer.Designer.cs">
+    <Compile Include="ContexMenu\Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContexMenu\IMGTransfer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ContexMenu\IMGTransfer.Designer.cs">
       <DependentUpon>IMGTransfer.cs</DependentUpon>
     </Compile>
-    <Compile Include="JPGtoPDF.cs">
+    <Compile Include="ContexMenu\JPGtoPDF.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="JPGtoPDF.Designer.cs">
+    <Compile Include="ContexMenu\JPGtoPDF.Designer.cs">
       <DependentUpon>JPGtoPDF.cs</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.cs">
@@ -72,24 +78,27 @@
     <Compile Include="MainWindow.Designer.cs">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="PDFtoJPG.cs">
+    <Compile Include="ContexMenu\PDFtoJPG.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="PDFtoJPG.Designer.cs">
+    <Compile Include="ContexMenu\PDFtoJPG.Designer.cs">
       <DependentUpon>PDFtoJPG.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="IMGTransfer.resx">
+    <EmbeddedResource Include="ContexMenu\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContexMenu\IMGTransfer.resx">
       <DependentUpon>IMGTransfer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="JPGtoPDF.resx">
+    <EmbeddedResource Include="ContexMenu\JPGtoPDF.resx">
       <DependentUpon>JPGtoPDF.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PDFtoJPG.resx">
+    <EmbeddedResource Include="ContexMenu\PDFtoJPG.resx">
       <DependentUpon>PDFtoJPG.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -114,6 +123,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Pictures\icons8-home-20.png" />
+    <Content Include="Pictures\icons8-image-20.png" />
+    <Content Include="Pictures\icons8-moon-20.png" />
+    <Content Include="Pictures\icons8-sun-20.png" />
+    <Content Include="Pictures\img.png" />
+    <Content Include="Pictures\logo.jpg" />
+    <Content Include="Pictures\visual-design_icon-icons.com_72174.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

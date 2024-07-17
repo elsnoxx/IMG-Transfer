@@ -46,3 +46,4 @@ C:\Users\ficek\Documents\GitHub\IMG-Transfer\Transfer-IMG\obj\Release\Transfer-I
 C:\Users\ficek\Documents\GitHub\IMG-Transfer\Transfer-IMG\obj\Release\Transfer.A9E121CD.Up2Date
 C:\Users\ficek\Documents\GitHub\IMG-Transfer\Transfer-IMG\obj\Release\Transfer-IMG.exe
 C:\Users\ficek\Documents\GitHub\IMG-Transfer\Transfer-IMG\obj\Release\Transfer-IMG.pdb
+C:\Users\admin\Documents\GitHub\IMG-Transfer\Transfer-IMG\obj\Release\Transfer_IMG.Home.resources

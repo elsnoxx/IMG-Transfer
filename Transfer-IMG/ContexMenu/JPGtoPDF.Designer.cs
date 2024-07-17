@@ -30,68 +30,27 @@ namespace Transfer_IMG
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.Choose = new System.Windows.Forms.Button();
             this.FolderPath = new System.Windows.Forms.TextBox();
             this.Path = new System.Windows.Forms.TextBox();
             this.openFile = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
-            // label1
+            // label4
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(249, 45);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(169, 31);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "JPG to PDF";
-            // 
-            // Choose
-            // 
-            this.Choose.AutoSize = true;
-            this.Choose.BackColor = System.Drawing.Color.Moccasin;
-            this.Choose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Choose.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.Choose.Location = new System.Drawing.Point(598, 276);
-            this.Choose.Name = "Choose";
-            this.Choose.Size = new System.Drawing.Size(111, 30);
-            this.Choose.TabIndex = 22;
-            this.Choose.Text = "Vybrat složku";
-            this.Choose.UseVisualStyleBackColor = false;
-            this.Choose.Visible = false;
-            this.Choose.Click += new System.EventHandler(this.Choose_Click);
-            // 
-            // FolderPath
-            // 
-            this.FolderPath.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.FolderPath.Location = new System.Drawing.Point(47, 280);
-            this.FolderPath.Name = "FolderPath";
-            this.FolderPath.Size = new System.Drawing.Size(484, 24);
-            this.FolderPath.TabIndex = 21;
-            this.FolderPath.Visible = false;
-            // 
-            // Path
-            // 
-            this.Path.Location = new System.Drawing.Point(47, 110);
-            this.Path.Name = "Path";
-            this.Path.Size = new System.Drawing.Size(484, 20);
-            this.Path.TabIndex = 20;
-            // 
-            // openFile
-            // 
-            this.openFile.BackColor = System.Drawing.Color.Moccasin;
-            this.openFile.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.openFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.openFile.ForeColor = System.Drawing.Color.Black;
-            this.openFile.Location = new System.Drawing.Point(598, 104);
-            this.openFile.Name = "openFile";
-            this.openFile.Size = new System.Drawing.Size(107, 28);
-            this.openFile.TabIndex = 19;
-            this.openFile.Text = "Otevřít";
-            this.openFile.UseVisualStyleBackColor = false;
-            this.openFile.Click += new System.EventHandler(this.openFile_Click);
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(226, 21);
+            this.label4.Name = "label4";
+            this.label4.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label4.Size = new System.Drawing.Size(274, 33);
+            this.label4.TabIndex = 32;
+            this.label4.Text = "Převodník obrázků";
             // 
             // checkBox1
             // 
@@ -99,24 +58,73 @@ namespace Transfer_IMG
             this.checkBox1.Checked = true;
             this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.checkBox1.Location = new System.Drawing.Point(47, 252);
+            this.checkBox1.Location = new System.Drawing.Point(42, 224);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(331, 22);
-            this.checkBox1.TabIndex = 23;
+            this.checkBox1.TabIndex = 31;
             this.checkBox1.Text = "Uložení na stejné místo jako nahraný obrázek.";
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // Choose
+            // 
+            this.Choose.AutoSize = true;
+            this.Choose.BackColor = System.Drawing.Color.Moccasin;
+            this.Choose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Choose.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.Choose.Location = new System.Drawing.Point(589, 249);
+            this.Choose.Name = "Choose";
+            this.Choose.Size = new System.Drawing.Size(111, 30);
+            this.Choose.TabIndex = 30;
+            this.Choose.Text = "Vybrat složku";
+            this.Choose.UseVisualStyleBackColor = false;
+            this.Choose.Visible = false;
+            this.Choose.Click += new System.EventHandler(this.Choose_Click);
+            // 
+            // FolderPath
+            // 
+            this.FolderPath.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.FolderPath.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.FolderPath.Location = new System.Drawing.Point(42, 249);
+            this.FolderPath.Name = "FolderPath";
+            this.FolderPath.Size = new System.Drawing.Size(484, 30);
+            this.FolderPath.TabIndex = 29;
+            this.FolderPath.Visible = false;
+            // 
+            // Path
+            // 
+            this.Path.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Path.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Path.Location = new System.Drawing.Point(42, 120);
+            this.Path.Name = "Path";
+            this.Path.Size = new System.Drawing.Size(484, 30);
+            this.Path.TabIndex = 28;
+            // 
+            // openFile
+            // 
+            this.openFile.BackColor = System.Drawing.Color.Moccasin;
+            this.openFile.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.openFile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.openFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.openFile.ForeColor = System.Drawing.Color.Black;
+            this.openFile.Location = new System.Drawing.Point(589, 120);
+            this.openFile.Name = "openFile";
+            this.openFile.Size = new System.Drawing.Size(111, 30);
+            this.openFile.TabIndex = 27;
+            this.openFile.Text = "Otevřít";
+            this.openFile.UseVisualStyleBackColor = false;
+            this.openFile.Click += new System.EventHandler(this.openFile_Click);
             // 
             // JPGtoPDF
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.Choose);
             this.Controls.Add(this.FolderPath);
             this.Controls.Add(this.Path);
             this.Controls.Add(this.openFile);
-            this.Controls.Add(this.label1);
             this.Name = "JPGtoPDF";
             this.Size = new System.Drawing.Size(761, 528);
             this.ResumeLayout(false);
@@ -133,11 +141,11 @@ namespace Transfer_IMG
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        public System.Windows.Forms.Button Choose;
-        private System.Windows.Forms.TextBox FolderPath;
-        private System.Windows.Forms.TextBox Path;
-        private System.Windows.Forms.Button openFile;
+        private Label label4;
         private CheckBox checkBox1;
+        public Button Choose;
+        private TextBox FolderPath;
+        private TextBox Path;
+        private Button openFile;
     }
 }
