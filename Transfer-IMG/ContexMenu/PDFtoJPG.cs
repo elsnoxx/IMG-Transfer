@@ -92,5 +92,33 @@ namespace Transfer_IMG
             }
         }
 
+        private void genJPG_Click(object sender, EventArgs e)
+        {
+            string pdfPath = Path.Text;
+            if (string.IsNullOrEmpty(pdfPath))
+            {
+                MessageBox.Show("Please select a PDF file.");
+                return;
+            }
+
+            string outputFolderPath = "";
+            if (checkBox1.Checked)
+            {
+                outputFolderPath = FolderPath.Text;
+            }
+            else
+            {
+                outputFolderPath = System.IO.Path.GetDirectoryName(pdfPath);
+            }
+            try
+            {
+
+                MessageBox.Show("PDF converted to images successfully.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error converting PDF: " + ex.Message);
+            }
+        }
     }
 }

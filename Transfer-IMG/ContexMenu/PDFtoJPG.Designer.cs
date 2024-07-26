@@ -36,6 +36,7 @@ namespace Transfer_IMG
             this.FolderPath = new System.Windows.Forms.TextBox();
             this.Path = new System.Windows.Forms.TextBox();
             this.openFile = new System.Windows.Forms.Button();
+            this.genJPG = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label4
@@ -115,10 +116,21 @@ namespace Transfer_IMG
             this.openFile.UseVisualStyleBackColor = false;
             this.openFile.Click += new System.EventHandler(this.openFile_Click);
             // 
+            // genJPG
+            // 
+            this.genJPG.Location = new System.Drawing.Point(313, 399);
+            this.genJPG.Name = "genJPG";
+            this.genJPG.Size = new System.Drawing.Size(75, 23);
+            this.genJPG.TabIndex = 39;
+            this.genJPG.Text = "Převést";
+            this.genJPG.UseVisualStyleBackColor = true;
+            this.genJPG.Click += new System.EventHandler(this.genJPG_Click);
+            // 
             // PDFtoJPG
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.genJPG);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.Choose);
@@ -147,5 +159,6 @@ namespace Transfer_IMG
         private TextBox FolderPath;
         private TextBox Path;
         private Button openFile;
+        private Button genJPG;
     }
 }

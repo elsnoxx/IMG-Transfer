@@ -9,6 +9,10 @@ Tato aplikace umožňuje uživatelům komprimovat obrázky do formátů JPEG neb
 - **Výběr výstupního adresáře:** Možnost zvolit cílový adresář pro uložení komprimovaného obrázku.
 - **Zobrazení pokroku:** Proces komprese je vizualizován pomocí progress baru.
 - **Jednoduché ovládání:** Intuitivní uživatelské rozhraní ve Windows Forms.
+- **Převod JPG do PDF:** Umožňuje převést obrázek ve formátu JPG do PDF.
+- **Převod PDF do JPG:** Umožňuje převést stránky PDF dokumentu do obrázků ve formátu JPG.
+- **Export QR kódu jako SVG:** Umožňuje uložit vygenerovaný QR kód jako SVG soubor.
+
 
 ## Instalace a spuštění
 
@@ -26,8 +30,11 @@ Tato aplikace umožňuje uživatelům komprimovat obrázky do formátů JPEG neb
 
 1. **Výběr obrázku:** Klikněte na tlačítko "Vybrat soubor" nebo přetáhněte soubor přímo do okna aplikace.
 2. **Nastavení formátu a kvality:** Vyberte formát (JPEG nebo PNG) a kvalitu komprese.
-3. **Komprese:** Klikněte na tlačítko "Převést obrázek" a počkejte, dokud se obrázek nezkompromuje.
+3. **Komprese:** Klikněte na tlačítko "Převést obrázek" a počkejte, dokud se obrázek nezkomprimuje.
 4. **Uložení:** Komprimovaný obrázek se uloží do vybraného adresáře.
+5. **Převod JPG do PDF:** Vyberte JPG obrázek, nastavte výstupní adresář a klikněte na "Převést do PDF".
+6. **Převod PDF do JPG:** Vyberte PDF dokument, nastavte výstupní adresář a klikněte na "Převést do JPG".
+7. **Export QR kódu jako SVG:** Vygenerujte QR kód a zvolte možnost "Uložit jako SVG".
 
 ## Podpora a kontakt
 

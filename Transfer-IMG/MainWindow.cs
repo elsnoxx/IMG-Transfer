@@ -8,13 +8,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using Transfer_IMG.ContexMenu;
+using Transfer_IMG.General;
+
 namespace Transfer_IMG
 {
     public partial class MainWindow : Form
     {
+        
         public MainWindow()
         {
             InitializeComponent();
+
+            WT WT = new WT();
+
+            WT.language = "1";
+
+
             LoadControl(new Home());
         }
 
@@ -42,6 +52,12 @@ namespace Transfer_IMG
             LoadControl(new Home());
         }
 
+        private void QRcodes_Click(object sender, EventArgs e)
+        {
+            Highlight(sender);
+            LoadControl(new QRcodes());
+        }
+
         private void LoadControl(UserControl userControl)
         {
             mainPanel.Controls.Clear();
@@ -51,19 +67,25 @@ namespace Transfer_IMG
 
         private void Highlight(object sender)
         {
-            // Reset color of all buttons
-            btnTransferIMG.BackColor = SystemColors.InactiveBorder;
-            JPGtoPDF.BackColor = SystemColors.InactiveBorder;
-            PDFtoJPG.BackColor = SystemColors.InactiveBorder;
-            btnHome.BackColor = SystemColors.InactiveBorder;
+            foreach (Control control in menuPanel.Controls)
+            {
+                if (control is Button button)
+                {
+                    button.BackColor = WT.colorDefault;
+                }
+            }
 
             // Highlight the clicked button
             Button clickedButton = sender as Button;
             if (clickedButton != null)
             {
-                clickedButton.BackColor = Color.Bisque;
+                clickedButton.BackColor = WT.color;
             }
         }
 
+        private void language_Click(object sender, EventArgs e)
+        {
+            language.Text = "EN";
+        }
     }
 }
