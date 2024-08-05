@@ -4,13 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
+using System.Drawing.Imaging;
+using System.Globalization;
 
 namespace Transfer_IMG.General
 {
     public sealed class WT
     {
+        // Color schema
+        public static Color color = System.Drawing.ColorTranslator.FromHtml("#7a7d84");
+        public static Color colorDefault = System.Drawing.ColorTranslator.FromHtml("#212121");
+
+        // language settings
         public static string language = "";
-        public static Color color = Color.LightBlue;
-        public static Color colorDefault = SystemColors.ActiveCaption;
     }
 }

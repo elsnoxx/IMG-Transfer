@@ -85,7 +85,16 @@ namespace Transfer_IMG
 
         private void language_Click(object sender, EventArgs e)
         {
-            language.Text = "EN";
+            if (language.Text == "CZ")
+            {
+                language.Text = "EN";
+                WT.language = language.Text;
+            }
+            else
+            {
+                language.Text = "CZ";
+                WT.language = language.Text;
+            }
         }
     }
 }

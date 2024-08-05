@@ -118,12 +118,17 @@ namespace Transfer_IMG
             // 
             // btnPDFGen
             // 
-            this.btnPDFGen.Location = new System.Drawing.Point(312, 406);
+            this.btnPDFGen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnPDFGen.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPDFGen.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnPDFGen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPDFGen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnPDFGen.Location = new System.Drawing.Point(254, 416);
             this.btnPDFGen.Name = "btnPDFGen";
-            this.btnPDFGen.Size = new System.Drawing.Size(121, 23);
+            this.btnPDFGen.Size = new System.Drawing.Size(205, 70);
             this.btnPDFGen.TabIndex = 33;
             this.btnPDFGen.Text = "Generovat PDF";
-            this.btnPDFGen.UseVisualStyleBackColor = true;
+            this.btnPDFGen.UseVisualStyleBackColor = false;
             this.btnPDFGen.Click += new System.EventHandler(this.btnPDFGen_Click);
             // 
             // JPGtoPDF

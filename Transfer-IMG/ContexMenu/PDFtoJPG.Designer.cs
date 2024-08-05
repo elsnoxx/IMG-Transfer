@@ -73,7 +73,7 @@ namespace Transfer_IMG
             this.Choose.BackColor = System.Drawing.Color.Moccasin;
             this.Choose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Choose.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.Choose.Location = new System.Drawing.Point(569, 249);
+            this.Choose.Location = new System.Drawing.Point(589, 249);
             this.Choose.Name = "Choose";
             this.Choose.Size = new System.Drawing.Size(111, 30);
             this.Choose.TabIndex = 36;
@@ -108,7 +108,7 @@ namespace Transfer_IMG
             this.openFile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.openFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.openFile.ForeColor = System.Drawing.Color.Black;
-            this.openFile.Location = new System.Drawing.Point(569, 120);
+            this.openFile.Location = new System.Drawing.Point(589, 120);
             this.openFile.Name = "openFile";
             this.openFile.Size = new System.Drawing.Size(111, 30);
             this.openFile.TabIndex = 33;
@@ -118,12 +118,15 @@ namespace Transfer_IMG
             // 
             // genJPG
             // 
-            this.genJPG.Location = new System.Drawing.Point(313, 399);
+            this.genJPG.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.genJPG.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.genJPG.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.genJPG.Location = new System.Drawing.Point(254, 416);
             this.genJPG.Name = "genJPG";
-            this.genJPG.Size = new System.Drawing.Size(75, 23);
+            this.genJPG.Size = new System.Drawing.Size(205, 70);
             this.genJPG.TabIndex = 39;
             this.genJPG.Text = "Převést";
-            this.genJPG.UseVisualStyleBackColor = true;
+            this.genJPG.UseVisualStyleBackColor = false;
             this.genJPG.Click += new System.EventHandler(this.genJPG_Click);
             // 
             // PDFtoJPG

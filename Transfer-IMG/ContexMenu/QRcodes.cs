@@ -22,13 +22,11 @@ namespace Transfer_IMG.ContexMenu
 
         public void language()
         {
-            if (WT.language == "1")
-            {
-                this.saveLabel.Text = "Uloženo";
-            }
-            else
+            if (WT.language == "EN")
             {
                 this.saveLabel.Text = "Saved";
+                this.btnSaveQR.Text = "Save as PNG";
+                this.btnSaveQRSVG.Text = "Save as SVG";
             }
         }
 
