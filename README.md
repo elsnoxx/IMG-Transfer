@@ -11,7 +11,8 @@ Tato aplikace umožňuje uživatelům komprimovat obrázky do formátů JPEG neb
 - **Jednoduché ovládání:** Intuitivní uživatelské rozhraní ve Windows Forms.
 - **Převod JPG do PDF:** Umožňuje převést obrázek ve formátu JPG do PDF.
 - **Převod PDF do JPG:** Umožňuje převést stránky PDF dokumentu do obrázků ve formátu JPG.
-- **Export QR kódu jako SVG:** Umožňuje uložit vygenerovaný QR kód jako SVG soubor.
+- **Generování QR kódu:** Umožňuje vygenerovaný QR kód i se specialními znaky.
+- **Export QR kódu jako SVG a PNG:** Umožňuje uložit vygenerovaný QR kód jako SVG a PNG soubor.
 
 
 ## Instalace a spuštění
@@ -19,7 +20,7 @@ Tato aplikace umožňuje uživatelům komprimovat obrázky do formátů JPEG neb
 ### Požadavky
 
 - Operační systém Windows (7 a novější)
-- .NET Framework 4.7.2 (nebo novější)
+- .NET Framework 4.8.0 (nebo novější)
 
 ### Instalace
 
@@ -38,12 +39,11 @@ Tato aplikace umožňuje uživatelům komprimovat obrázky do formátů JPEG neb
 
 ## Podpora a kontakt
 
-V případě potíží nebo dotazů kontaktujte náš tým podpory na ficek.risa@gmail.com nebo navštivte naše webové stránky [www.elsnoxx.github.io](https://elsnoxx.github.io/contact.html).
+V případě potíží nebo dotazů kontaktujte náš tým podpory na ficek.risa@gmail.com nebo navštivte mé webové stránky [www.elsnoxx.github.io](https://elsnoxx.github.io/contact.html).
 
 ## Work-in progress
 
 - Upravit velikost ddl balicku
-- Lepší UI a nový design
 - Přidání převodu JPG to PDF
 - Přidání převodu PDF to JPG
 - Rošiřitelnost okna, zmena velikosti
