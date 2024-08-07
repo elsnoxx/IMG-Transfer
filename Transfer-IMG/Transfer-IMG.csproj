@@ -149,6 +149,7 @@
     <Compile Include="ContexMenu\QRcodes.Designer.cs">
       <DependentUpon>QRcodes.cs</DependentUpon>
     </Compile>
+    <Compile Include="General\Common.cs" />
     <Compile Include="General\WT.cs" />
     <Compile Include="MainWindow.cs">
       <SubType>Form</SubType>

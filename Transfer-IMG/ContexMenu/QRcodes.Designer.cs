@@ -200,8 +200,9 @@ namespace Transfer_IMG.ContexMenu
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(226, 21);
+            this.label1.Location = new System.Drawing.Point(250, 42);
             this.label1.Name = "label1";
+            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label1.Size = new System.Drawing.Size(203, 33);
             this.label1.TabIndex = 11;
             this.label1.Text = "QR generator";

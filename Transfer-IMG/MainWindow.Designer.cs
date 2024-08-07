@@ -188,6 +188,7 @@
             this.MaximumSize = new System.Drawing.Size(952, 591);
             this.MinimumSize = new System.Drawing.Size(952, 591);
             this.Name = "MainWindow";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main Window";
             this.menuPanel.ResumeLayout(false);
             this.menuPanel.PerformLayout();

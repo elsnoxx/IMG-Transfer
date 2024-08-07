@@ -153,7 +153,7 @@ namespace Transfer_IMG.ContexMenu
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            textBox.Text = string.Empty;
+            textBox.Clear();
             qrCodePictureBox.Image = null;
         }
 

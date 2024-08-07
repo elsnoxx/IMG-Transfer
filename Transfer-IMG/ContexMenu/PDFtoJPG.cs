@@ -101,6 +101,12 @@ namespace Transfer_IMG
                 return;
             }
 
+            if (!checkBox1.Checked && string.IsNullOrEmpty(FolderPath.Text))
+            {
+                MessageBox.Show("Please select an folder.");
+                return;
+            }
+
             string outputFolderPath = "";
             if (checkBox1.Checked)
             {

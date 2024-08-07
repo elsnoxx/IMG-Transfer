@@ -10,14 +10,18 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Transfer_IMG.General;
 
 namespace Transfer_IMG
 {
     public partial class IMGTransfer : UserControl
     {
+        private Common common;
+
         public IMGTransfer()
         {
             InitializeComponent();
+            common = new Common();
             // Nastavení výchozích hodnot pro ComboBoxy
             comboBox2.SelectedIndex = 0;
             comboBox1.SelectedIndex = 0;
@@ -80,20 +84,6 @@ namespace Transfer_IMG
             label5.Visible = false;
         }
 
-        // Metoda pro aktualizaci progress baru
-        private void ProgressBar(int length)
-        {
-            for (int i = 0; i < length; i++)
-            {
-                if (progressBar1.Value == 100)
-                {
-                    break;
-                }
-                progressBar1.Value += 1;
-                Thread.Sleep(10); // Pauza pro simulaci práce
-            }
-        }
-
         // Handler pro tlačítko pro převod obrázku
         private void transfer_Click(object sender, EventArgs e)
         {
@@ -115,19 +105,21 @@ namespace Transfer_IMG
 
                 // Načtení obrázku
                 Bitmap originalImage = new Bitmap(Path.Text);
-                ProgressBar(10);
+                common.ProgressBarLoading(10, progressBar1);
+
+                
 
                 // Komprimace obrázku
                 MemoryStream memoryStream = CompressImage(originalImage, quality);
-                ProgressBar(10);
+                common.ProgressBarLoading(10, progressBar1);
 
                 // Získání cesty k výstupnímu souboru
                 string outputFilePath = GetOutputFilePath(outputFormat);
-                ProgressBar(10);
+                common.ProgressBarLoading(10, progressBar1);
 
                 // Uložení komprimovaného obrázku
                 SaveCompressedImage(memoryStream, outputFilePath);
-                ProgressBar(70);
+                common.ProgressBarLoading(70, progressBar1);
 
             }
             catch (Exception ex)

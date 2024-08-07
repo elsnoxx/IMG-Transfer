@@ -24,6 +24,7 @@ namespace Transfer_IMG
         // Handler pro tlačítko výběru souboru
         private void openFile_Click(object sender, EventArgs e)
         {
+            label5.Visible = false;
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
                 openFileDialog.InitialDirectory = "c:\\";
@@ -44,6 +45,7 @@ namespace Transfer_IMG
         // Handler pro událost DragEnter - určuje, zda lze přetahovaný objekt zpracovat
         private void Form1_DragEnter(object sender, DragEventArgs e)
         {
+            label5.Visible = false;
             // Kontrola, zda přetažené data jsou soubory
             if (e.Data.GetDataPresent(DataFormats.FileDrop))
             {
@@ -58,6 +60,7 @@ namespace Transfer_IMG
         // Handler pro událost DragDrop - zpracovává přetažené soubory
         private void Form1_DragDrop(object sender, DragEventArgs e)
         {
+            label5.Visible = false;
             // Získání přetažených souborů
             if (e.Data.GetDataPresent(DataFormats.FileDrop))
             {
@@ -96,13 +99,13 @@ namespace Transfer_IMG
 
         private void btnPDFGen_Click(object sender, EventArgs e)
         {
-            string imagePath = Path.Text;
-            if (string.IsNullOrEmpty(imagePath))
+            if (!ValidateInput())
             {
-                MessageBox.Show("Please select an image file.");
                 return;
             }
 
+
+            string imagePath = Path.Text;
             string pdfPath = "";
             if (!checkBox1.Checked)
             {
@@ -129,12 +132,31 @@ namespace Transfer_IMG
 
                     document.Save(pdfPath);
                 }
-                MessageBox.Show("PDF generated successfully: " + pdfPath);
+                label5.Visible = true;
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error generating PDF: " + ex.Message);
             }
+        }
+
+
+        private bool ValidateInput()
+        {
+
+            if (string.IsNullOrEmpty(Path.Text))
+            {
+                MessageBox.Show("Please select an image file.");
+                return false;
+            }
+
+            if (!checkBox1.Checked && string.IsNullOrEmpty(FolderPath.Text))
+            {
+                MessageBox.Show("Please select an folder.");
+                return false;
+            }
+
+            return true;
         }
 
     }
