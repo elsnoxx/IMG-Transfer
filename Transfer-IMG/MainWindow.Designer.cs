@@ -32,6 +32,7 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.mainPanel = new System.Windows.Forms.Panel();
             this.menuPanel = new System.Windows.Forms.Panel();
+            this.about = new System.Windows.Forms.PictureBox();
             this.language = new System.Windows.Forms.Label();
             this.QRcodes = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
@@ -39,6 +40,7 @@
             this.JPGtoPDF = new System.Windows.Forms.Button();
             this.btnTransferIMG = new System.Windows.Forms.Button();
             this.menuPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.about)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -61,6 +63,7 @@
             // menuPanel
             // 
             this.menuPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.menuPanel.Controls.Add(this.about);
             this.menuPanel.Controls.Add(this.language);
             this.menuPanel.Controls.Add(this.QRcodes);
             this.menuPanel.Controls.Add(this.btnHome);
@@ -71,6 +74,16 @@
             this.menuPanel.Name = "menuPanel";
             this.menuPanel.Size = new System.Drawing.Size(176, 528);
             this.menuPanel.TabIndex = 2;
+            // 
+            // about
+            // 
+            this.about.Image = ((System.Drawing.Image)(resources.GetObject("about.Image")));
+            this.about.Location = new System.Drawing.Point(149, 501);
+            this.about.Name = "about";
+            this.about.Size = new System.Drawing.Size(24, 24);
+            this.about.TabIndex = 5;
+            this.about.TabStop = false;
+            this.about.Click += new System.EventHandler(this.about_Click);
             // 
             // language
             // 
@@ -192,6 +205,7 @@
             this.Text = "Main Window";
             this.menuPanel.ResumeLayout(false);
             this.menuPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.about)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -207,5 +221,6 @@
         private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Button QRcodes;
         private System.Windows.Forms.Label language;
+        private System.Windows.Forms.PictureBox about;
     }
 }

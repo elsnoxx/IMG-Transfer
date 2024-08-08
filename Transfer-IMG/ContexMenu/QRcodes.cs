@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Transfer_IMG.General;
+using Transfer_IMG.Popup;
 
 namespace Transfer_IMG.ContexMenu
 {
@@ -17,20 +18,18 @@ namespace Transfer_IMG.ContexMenu
         public QRcodes()
         {
             InitializeComponent();
-            language();
-        }
-
-        public void language()
-        {
-            if (WT.language == "EN")
-            {
-                this.saveLabel.Text = "Saved";
-                this.btnSaveQR.Text = "Save as PNG";
-                this.btnSaveQRSVG.Text = "Save as SVG";
-            }
         }
 
         private void GenQr_Click(object sender, EventArgs e)
+        {
+            // Create a new instance of the Form2 class
+            QRdownload QRdownloadPopup = new QRdownload((Bitmap)qrCodePictureBox.Image, textBox.Text);
+
+            // Show the settings form
+            QRdownloadPopup.ShowDialog();
+        }
+
+        private void GenQr_Update(object sender, EventArgs e)
         {
             // Instance QRCodeGenerator
             QRCodeGenerator qrGenerator = new QRCodeGenerator();
@@ -106,91 +105,13 @@ namespace Transfer_IMG.ContexMenu
 
         private void textBox_TextChanged(object sender, EventArgs e)
         {
-            saveLabel_hide();
-            GenQr_Click(sender, e);
-        }
-
-        private void btnSaveQR_Click(object sender, EventArgs e)
-        {
-            QRCodeGenerator qrGenerator = new QRCodeGenerator();
-
-            // Instance QRCodeData a GenerateData
-            QRCodeData qrCodeData = qrGenerator.CreateQrCode(textBox.Text, QRCodeGenerator.ECCLevel.Q);
-
-            // Instance QRCode a QRCodeData
-            QRCode qrCode = new QRCode(qrCodeData);
-
-            // Bitmapa pro zobrazení QR kódu
-            Bitmap qrCodeImage = qrCode.GetGraphic(20);
-
-            // Uložení QR kódu do souboru
-            using (SaveFileDialog saveFileDialog = new SaveFileDialog())
-            {
-                saveFileDialog.Filter = "PNG Image|*.png";
-                saveFileDialog.Title = "Save QR Code";
-                saveFileDialog.FileName = "QRCode.png";
-
-                if (saveFileDialog.ShowDialog() == DialogResult.OK)
-                {
-                    if (!string.IsNullOrEmpty(saveFileDialog.FileName))
-                    {
-                        qrCodeImage.Save(saveFileDialog.FileName, System.Drawing.Imaging.ImageFormat.Png);
-                        saveLabel_dysplayed();
-                    }
-                }
-            }
-        }
-
-        private void saveLabel_dysplayed()
-        {
-            saveLabel.Visible = true;
-        }
-
-        private void saveLabel_hide()
-        {
-            saveLabel.Visible = false;
+            GenQr_Update(sender, e);
         }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
             textBox.Clear();
             qrCodePictureBox.Image = null;
-        }
-
-        private void btnSaveQRSVG_Click(object sender, EventArgs e)
-        {
-            QRCodeGenerator qrGenerator = new QRCodeGenerator();
-
-            // Instance QRCodeData a GenerateData
-            QRCodeData qrCodeData = qrGenerator.CreateQrCode(textBox.Text, QRCodeGenerator.ECCLevel.Q);
-
-            // Instance QRCode a QRCodeData
-            QRCode qrCode = new QRCode(qrCodeData);
-
-            Bitmap svgCode = qrCode.GetGraphic(20, Color.Black, Color.White, true);
-
-            // Uložení QR kódu do souboru
-            using (SaveFileDialog saveFileDialog = new SaveFileDialog())
-            {
-                saveFileDialog.Filter = "PNG Image|*.svg";
-                saveFileDialog.Title = "Save QR Code";
-                saveFileDialog.FileName = "QRCode.svg";
-
-                if (saveFileDialog.ShowDialog() == DialogResult.OK)
-                {
-                    try
-                    {
-                        System.IO.File.WriteAllText(saveFileDialog.FileName, svgCode.ToString());
-                        saveLabel_dysplayed();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Error saving QR code: " + ex.Message);
-                    }
-                }
-            }
-        }
-
-        
+        }        
     }
 }

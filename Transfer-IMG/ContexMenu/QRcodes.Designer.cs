@@ -39,11 +39,8 @@ namespace Transfer_IMG.ContexMenu
             this.GenQr = new System.Windows.Forms.Button();
             this.qrCodePictureBox = new System.Windows.Forms.PictureBox();
             this.textBox = new System.Windows.Forms.TextBox();
-            this.btnSaveQR = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
-            this.btnSaveQRSVG = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.saveLabel = new System.Windows.Forms.Label();
             this.bntinsertFirst = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.qrCodePictureBox)).BeginInit();
             this.SuspendLayout();
@@ -145,9 +142,9 @@ namespace Transfer_IMG.ContexMenu
             // 
             this.qrCodePictureBox.BackColor = System.Drawing.Color.White;
             this.qrCodePictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.qrCodePictureBox.Location = new System.Drawing.Point(452, 161);
+            this.qrCodePictureBox.Location = new System.Drawing.Point(394, 161);
             this.qrCodePictureBox.Name = "qrCodePictureBox";
-            this.qrCodePictureBox.Size = new System.Drawing.Size(250, 250);
+            this.qrCodePictureBox.Size = new System.Drawing.Size(308, 308);
             this.qrCodePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.qrCodePictureBox.TabIndex = 6;
             this.qrCodePictureBox.TabStop = false;
@@ -161,16 +158,6 @@ namespace Transfer_IMG.ContexMenu
             this.textBox.Size = new System.Drawing.Size(658, 26);
             this.textBox.TabIndex = 7;
             this.textBox.TextChanged += new System.EventHandler(this.textBox_TextChanged);
-            // 
-            // btnSaveQR
-            // 
-            this.btnSaveQR.Location = new System.Drawing.Point(452, 433);
-            this.btnSaveQR.Name = "btnSaveQR";
-            this.btnSaveQR.Size = new System.Drawing.Size(100, 50);
-            this.btnSaveQR.TabIndex = 8;
-            this.btnSaveQR.Text = "Uložit jako PNG";
-            this.btnSaveQR.UseVisualStyleBackColor = true;
-            this.btnSaveQR.Click += new System.EventHandler(this.btnSaveQR_Click);
             // 
             // btnClear
             // 
@@ -186,16 +173,6 @@ namespace Transfer_IMG.ContexMenu
             this.btnClear.UseVisualStyleBackColor = false;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
-            // btnSaveQRSVG
-            // 
-            this.btnSaveQRSVG.Location = new System.Drawing.Point(601, 433);
-            this.btnSaveQRSVG.Name = "btnSaveQRSVG";
-            this.btnSaveQRSVG.Size = new System.Drawing.Size(100, 50);
-            this.btnSaveQRSVG.TabIndex = 10;
-            this.btnSaveQRSVG.Text = "Uložit jako SVG";
-            this.btnSaveQRSVG.UseVisualStyleBackColor = true;
-            this.btnSaveQRSVG.Click += new System.EventHandler(this.btnSaveQRSVG_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -206,18 +183,6 @@ namespace Transfer_IMG.ContexMenu
             this.label1.Size = new System.Drawing.Size(203, 33);
             this.label1.TabIndex = 11;
             this.label1.Text = "QR generator";
-            // 
-            // saveLabel
-            // 
-            this.saveLabel.AutoSize = true;
-            this.saveLabel.Font = new System.Drawing.Font("Showcard Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveLabel.ForeColor = System.Drawing.Color.ForestGreen;
-            this.saveLabel.Location = new System.Drawing.Point(522, 486);
-            this.saveLabel.Name = "saveLabel";
-            this.saveLabel.Size = new System.Drawing.Size(113, 27);
-            this.saveLabel.TabIndex = 12;
-            this.saveLabel.Text = "Uloženo";
-            this.saveLabel.Visible = false;
             // 
             // bntinsertFirst
             // 
@@ -240,11 +205,8 @@ namespace Transfer_IMG.ContexMenu
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.bntinsertFirst);
-            this.Controls.Add(this.saveLabel);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnSaveQRSVG);
             this.Controls.Add(this.btnClear);
-            this.Controls.Add(this.btnSaveQR);
             this.Controls.Add(this.textBox);
             this.Controls.Add(this.qrCodePictureBox);
             this.Controls.Add(this.GenQr);
@@ -271,11 +233,8 @@ namespace Transfer_IMG.ContexMenu
         private System.Windows.Forms.Button GenQr;
         private System.Windows.Forms.PictureBox qrCodePictureBox;
         private System.Windows.Forms.TextBox textBox;
-        private System.Windows.Forms.Button btnSaveQR;
         private System.Windows.Forms.Button btnClear;
-        private System.Windows.Forms.Button btnSaveQRSVG;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label saveLabel;
         private System.Windows.Forms.Button bntinsertFirst;
     }
 }

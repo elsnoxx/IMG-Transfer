@@ -50,6 +50,7 @@ V případě potíží nebo dotazů kontaktujte náš tým podpory na ficek.risa
 - Tlačítko na zvětšení texu
 - Dokumentace aplikace
 - Navod na použití aplikace
+- Nastavení aplikace = zmena barevného rezimu, oblibena stranka
 
 ---
 © 2024 Richard Ficek. Všechna práva vyhrazena.

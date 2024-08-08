@@ -11,6 +11,7 @@ using System.Windows.Forms;
 
 using Transfer_IMG.ContexMenu;
 using Transfer_IMG.General;
+using Transfer_IMG.Popup;
 
 namespace Transfer_IMG
 {
@@ -95,6 +96,12 @@ namespace Transfer_IMG
                 language.Text = "CZ";
                 WT.language = language.Text;
             }
+        }
+
+        private void about_Click(object sender, EventArgs e)
+        {
+            AboutBox aboutBox = new AboutBox();
+            aboutBox.ShowDialog();
         }
     }
 }
