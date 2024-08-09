@@ -887,11 +887,6 @@
             "AssemblyAsmDisplayName" = "8:Microsoft.Extensions.Logging, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_275B29F2387484769CDD52907ACA7256"
-                    {
-                    "Name" = "8:Microsoft.Extensions.Logging.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:Microsoft.Extensions.Logging.dll"
             "TargetName" = "8:"
@@ -980,11 +975,6 @@
             "AssemblyAsmDisplayName" = "8:System.Diagnostics.DiagnosticSource, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_40F2D00DACBAB31046D2E1DCF1182F6E"
-                    {
-                    "Name" = "8:System.Diagnostics.DiagnosticSource.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:System.Diagnostics.DiagnosticSource.dll"
             "TargetName" = "8:"
@@ -1073,11 +1063,6 @@
             "AssemblyAsmDisplayName" = "8:Microsoft.Extensions.Options, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_7EFABA5CCE63B81E92CEA003224C674E"
-                    {
-                    "Name" = "8:Microsoft.Extensions.Options.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:Microsoft.Extensions.Options.dll"
             "TargetName" = "8:"
@@ -1135,11 +1120,6 @@
             "AssemblyAsmDisplayName" = "8:Microsoft.Extensions.Primitives, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_8B4BF6E7D8DC6139ACA975911EB1BDB9"
-                    {
-                    "Name" = "8:Microsoft.Extensions.Primitives.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:Microsoft.Extensions.Primitives.dll"
             "TargetName" = "8:"
@@ -1290,11 +1270,6 @@
             "AssemblyAsmDisplayName" = "8:Microsoft.Extensions.Logging.Abstractions, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_9C3656F09A6B4F1344D07FDF729B7037"
-                    {
-                    "Name" = "8:Microsoft.Extensions.Logging.Abstractions.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:Microsoft.Extensions.Logging.Abstractions.dll"
             "TargetName" = "8:"
@@ -1445,11 +1420,6 @@
             "AssemblyAsmDisplayName" = "8:Microsoft.Bcl.AsyncInterfaces, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_B8A17300B289DBDD81C48B175EF437A2"
-                    {
-                    "Name" = "8:Microsoft.Bcl.AsyncInterfaces.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:Microsoft.Bcl.AsyncInterfaces.dll"
             "TargetName" = "8:"
@@ -1507,11 +1477,6 @@
             "AssemblyAsmDisplayName" = "8:Microsoft.Extensions.DependencyInjection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_DB657A6322C88868353C9C6CADDB0C40"
-                    {
-                    "Name" = "8:Microsoft.Extensions.DependencyInjection.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:Microsoft.Extensions.DependencyInjection.dll"
             "TargetName" = "8:"
@@ -1589,11 +1554,6 @@
             "AssemblyAsmDisplayName" = "8:Microsoft.Extensions.DependencyInjection.Abstractions, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_F706BB4180A27792AAC681E3AE8B0F12"
-                    {
-                    "Name" = "8:Microsoft.Extensions.DependencyInjection.Abstractions.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:Microsoft.Extensions.DependencyInjection.Abstractions.dll"
             "TargetName" = "8:"
@@ -1701,7 +1661,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:IMG-Transfer"
         "ProductCode" = "8:{340855D7-35CA-468C-9DB6-6F72878E6D74}"
-        "PackageCode" = "8:{14725960-B857-4C18-90D1-35AE9407FF42}"
+        "PackageCode" = "8:{E7CC49D8-DA3C-4495-B71A-6258AE6520A6}"
         "UpgradeCode" = "8:{72561505-CD3B-4E04-A473-D4EA6E2E17B0}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
