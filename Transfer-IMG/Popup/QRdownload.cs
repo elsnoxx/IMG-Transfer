@@ -9,9 +9,22 @@ using System.Drawing.Drawing2D;
 
 namespace Transfer_IMG.Popup
 {
+    /// <summary>
+    /// Represents a form that allows users to download a QR code in different formats (PNG, SVG, PDF).
+    /// </summary>
     public partial class QRdownload : Form
     {
+        /// <summary>
+        /// The text to encode in the QR code and its SVG representation.
+        /// </summary>
         public string QRtext_SVG = "";
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="QRdownload"/> class.
+        /// Sets the QR code image and text, and initializes the width selection box.
+        /// </summary>
+        /// <param name="qrCodeImage">The image of the QR code.</param>
+        /// <param name="QRtext">The text to encode in the QR code.</param>
         public QRdownload(Bitmap qrCodeImage, string QRtext)
         {
             InitializeComponent();
@@ -21,13 +34,17 @@ namespace Transfer_IMG.Popup
             widthBox.SelectedIndex = 0;
         }
 
+        /// <summary>
+        /// Event handler for the <c>btnSaveQR</c> button click event.
+        /// Resizes the QR code image based on user input and saves it as a PNG file.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
         private void btnSaveQR_Click(object sender, EventArgs e)
         {
-
-            // Změna velikosti obrázku podle zadaných rozměrů
+            // Resize the image according to user input
             System.Drawing.Image resizedQrCodeImage = ResizeImage(qrCodePictureBox.Image, widthBox);
 
-            // Uložení QR kódu do souboru
+            // Save the resized QR code image to a file
             using (SaveFileDialog saveFileDialog = new SaveFileDialog())
             {
                 saveFileDialog.Filter = "PNG Image|*.png";
@@ -45,58 +62,74 @@ namespace Transfer_IMG.Popup
             }
         }
 
+        /// <summary>
+        /// Displays a label indicating that the file has been saved.
+        /// </summary>
         private void saveLabel_dysplayed()
         {
             saveLabel.Visible = true;
         }
 
+        /// <summary>
+        /// Resizes the given image based on the width specified in the provided ComboBox.
+        /// </summary>
+        /// <param name="imgToResize">The image to resize.</param>
+        /// <param name="widthBox">The ComboBox containing the width value.</param>
+        /// <returns>A new resized image, or <c>null</c> if the width input is invalid.</returns>
         private static System.Drawing.Image ResizeImage(System.Drawing.Image imgToResize, ComboBox widthBox)
         {
             int Width;
 
-            // Kontrola, zda je vstup validní, pokud ne, zobrazí se chybová zpráva a metoda se ukončí.
+            // Check if the width input is valid
             if (!int.TryParse(widthBox.Text, out Width))
             {
                 MessageBox.Show("Zadal jsi špatnou velikost");
-                return null; // Ukončí metodu a vrátí null
+                return null;
             }
 
             Size size = new Size(Width, Width);
-            // Get the image current width
             int sourceWidth = imgToResize.Width;
-            // Get the image current height
             int sourceHeight = imgToResize.Height;
             float nPercent = 0;
             float nPercentW = 0;
             float nPercentH = 0;
-            // Calculate width and height with new desired size
+
             nPercentW = ((float)size.Width / (float)sourceWidth);
             nPercentH = ((float)size.Height / (float)sourceHeight);
             nPercent = Math.Min(nPercentW, nPercentH);
-            // New Width and Height
             int destWidth = (int)(sourceWidth * nPercent);
             int destHeight = (int)(sourceHeight * nPercent);
             Bitmap b = new Bitmap(destWidth, destHeight);
             Graphics g = Graphics.FromImage((System.Drawing.Image)b);
             g.InterpolationMode = InterpolationMode.HighQualityBicubic;
-            // Draw image with new width and height
             g.DrawImage(imgToResize, 0, 0, destWidth, destHeight);
             g.Dispose();
             return (System.Drawing.Image)b;
-
         }
 
+        /// <summary>
+        /// Generates a QR code bitmap from the specified text with the given size.
+        /// </summary>
+        /// <param name="qrText">The text to encode in the QR code.</param>
+        /// <param name="size">The size of the QR code.</param>
+        /// <returns>A bitmap representing the QR code.</returns>
         private Bitmap GenerateQrCodeBitmap(string qrText, int size)
         {
             QRCodeGenerator qrGenerator = new QRCodeGenerator();
             QRCodeData qrCodeData = qrGenerator.CreateQrCode(qrText, QRCodeGenerator.ECCLevel.Q);
             QRCode qrCode = new QRCode(qrCodeData);
 
-            // Vytvoření bitmapy QR kódu s požadovanou velikostí
+            // Create a QR code bitmap with the desired size
             Bitmap qrCodeBitmap = qrCode.GetGraphic(20, Color.Black, Color.White, true);
             return qrCodeBitmap;
         }
 
+        /// <summary>
+        /// Resizes the given bitmap to the specified width.
+        /// </summary>
+        /// <param name="imgToResize">The bitmap to resize.</param>
+        /// <param name="newWidth">The new width for the bitmap.</param>
+        /// <returns>A new resized bitmap.</returns>
         private Bitmap ResizeBitmap(Bitmap imgToResize, int newWidth)
         {
             Bitmap b = new Bitmap(newWidth, newWidth);
@@ -108,6 +141,11 @@ namespace Transfer_IMG.Popup
             return b;
         }
 
+        /// <summary>
+        /// Converts a bitmap to an SVG string encoded in Base64.
+        /// </summary>
+        /// <param name="bitmap">The bitmap to convert.</param>
+        /// <returns>An SVG string containing the Base64 encoded image.</returns>
         private string BitmapToSvgBase64(Bitmap bitmap)
         {
             using (MemoryStream ms = new MemoryStream())
@@ -119,9 +157,14 @@ namespace Transfer_IMG.Popup
             }
         }
 
+        /// <summary>
+        /// Event handler for the <c>btnSaveQRSVG</c> button click event.
+        /// Generates and saves the QR code as an SVG file with the specified size.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
         private void btnSaveQRSVG_Click(object sender, EventArgs e)
         {
-            // Získání nové velikosti
+            // Get the new width
             int newWidth;
             if (!int.TryParse(widthBox.Text, out newWidth))
             {
@@ -129,16 +172,16 @@ namespace Transfer_IMG.Popup
                 return;
             }
 
-            // Vygenerování QR kódu jako bitmapa
+            // Generate QR code bitmap
             Bitmap qrCodeBitmap = GenerateQrCodeBitmap(QRtext_SVG, newWidth);
 
-            // Změna velikosti bitmapy
+            // Resize bitmap
             Bitmap resizedBitmap = ResizeBitmap(qrCodeBitmap, newWidth);
 
-            // Převedení bitmapy na SVG
+            // Convert bitmap to SVG
             string resizedSvgCode = BitmapToSvgBase64(resizedBitmap);
 
-            // Uložení SVG kódu do souboru
+            // Save SVG code to a file
             using (SaveFileDialog saveFileDialog = new SaveFileDialog())
             {
                 saveFileDialog.Filter = "SVG Image|*.svg";
@@ -149,7 +192,7 @@ namespace Transfer_IMG.Popup
                 {
                     if (!string.IsNullOrEmpty(saveFileDialog.FileName))
                     {
-                        // Uložení SVG kódu do souboru
+                        // Save SVG code to file
                         System.IO.File.WriteAllText(saveFileDialog.FileName, resizedSvgCode);
                         saveLabel_dysplayed();
                     }
@@ -157,14 +200,17 @@ namespace Transfer_IMG.Popup
             }
         }
 
-
-
+        /// <summary>
+        /// Event handler for the <c>savAsPDF</c> button click event.
+        /// Saves the QR code image as a PDF file.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
         private void savAsPDF_Click(object sender, EventArgs e)
         {
-            // Bitmapa pro zobrazení QR kódu
+            // Bitmap for displaying the QR code
             Bitmap qrCodeImage = (Bitmap)qrCodePictureBox.Image;
 
-            // Uložení QR kódu do souboru jako PDF
+            // Save QR code as a PDF file
             using (SaveFileDialog saveFileDialog = new SaveFileDialog())
             {
                 saveFileDialog.Filter = "PDF Document|*.pdf";
@@ -175,29 +221,29 @@ namespace Transfer_IMG.Popup
                 {
                     if (!string.IsNullOrEmpty(saveFileDialog.FileName))
                     {
-                        // Vytvoření PDF dokumentu
+                        // Create PDF document
                         using (PdfDocument document = new PdfDocument())
                         {
-                            // Přidání stránky
+                            // Add page
                             PdfPage page = document.AddPage();
 
-                            // Nastavení grafiky pro vykreslování na stránku
+                            // Set graphics for drawing on the page
                             XGraphics gfx = XGraphics.FromPdfPage(page);
 
-                            // Vytvoření XImage z Bitmapy
+                            // Create XImage from Bitmap
                             using (MemoryStream ms = new MemoryStream())
                             {
                                 qrCodeImage.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
                                 XImage img = XImage.FromStream(ms);
 
-                                // Vykreslení obrázku na střed stránky
+                                // Draw image centered on the page
                                 double x = (page.Width - img.PointWidth) / 2;
                                 double y = (page.Height - img.PointHeight) / 2;
 
                                 gfx.DrawImage(img, x, y, img.PointWidth, img.PointHeight);
                             }
 
-                            // Uložení PDF dokumentu
+                            // Save PDF document
                             document.Save(saveFileDialog.FileName);
                         }
                         saveLabel_dysplayed();
@@ -205,6 +251,5 @@ namespace Transfer_IMG.Popup
                 }
             }
         }
-
     }
 }

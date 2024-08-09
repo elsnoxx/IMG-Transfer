@@ -14,24 +14,35 @@ using Transfer_IMG.General;
 
 namespace Transfer_IMG
 {
+    /// <summary>
+    /// UserControl for transferring and compressing images.
+    /// Provides functionality to select, compress, and save images in different formats.
+    /// </summary>
     public partial class IMGTransfer : UserControl
     {
         private Common common;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="IMGTransfer"/> class.
+        /// Sets up default values for ComboBoxes and enables drag-and-drop functionality.
+        /// </summary>
         public IMGTransfer()
         {
             InitializeComponent();
             common = new Common();
-            // Nastavení výchozích hodnot pro ComboBoxy
+            // Set default values for ComboBoxes
             comboBox2.SelectedIndex = 0;
             comboBox1.SelectedIndex = 0;
 
-            // Povolí drag and drop na formuláři
+            // Enable drag and drop on the form
             SetupDragAndDrop();
         }
 
-
-        // Handler pro tlačítko výběru souboru
+        /// <summary>
+        /// Event handler for the <c>openFile</c> button click event.
+        /// Opens a file dialog to select an image file and displays the file path in a TextBox.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
         private void openFile_Click(object sender, EventArgs e)
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
@@ -43,19 +54,22 @@ namespace Transfer_IMG
 
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    // Zde můžete pracovat se vybraným souborem
+                    // Display the selected file path in TextBox
                     string selectedFileName = openFileDialog.FileName;
-                    // Zobrazení cesty k souboru v TextBoxu
                     Path.Text = selectedFileName;
                 }
             }
             label5.Visible = false;
         }
 
-        // Handler pro událost DragEnter - určuje, zda lze přetahovaný objekt zpracovat
+        /// <summary>
+        /// Event handler for the DragEnter event.
+        /// Determines whether the dragged object can be processed (i.e., if it is a file).
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="DragEventArgs"/> containing event data.</param>
         private void Form1_DragEnter(object sender, DragEventArgs e)
         {
-            // Kontrola, zda přetažené data jsou soubory
             if (e.Data.GetDataPresent(DataFormats.FileDrop))
             {
                 e.Effect = DragDropEffects.Copy;
@@ -66,15 +80,18 @@ namespace Transfer_IMG
             }
         }
 
-        // Handler pro událost DragDrop - zpracovává přetažené soubory
+        /// <summary>
+        /// Event handler for the DragDrop event.
+        /// Processes the dropped files and displays the path of the first file in a TextBox.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="DragEventArgs"/> containing event data.</param>
         private void Form1_DragDrop(object sender, DragEventArgs e)
         {
-            // Získání přetažených souborů
             if (e.Data.GetDataPresent(DataFormats.FileDrop))
             {
                 string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
 
-                // Načtení první cesty souboru do TextBoxu nebo jiné logiky
                 if (files.Length > 0)
                 {
                     string filePath = files[0];
@@ -84,10 +101,14 @@ namespace Transfer_IMG
             label5.Visible = false;
         }
 
-        // Handler pro tlačítko pro převod obrázku
+        /// <summary>
+        /// Event handler for the <c>transfer</c> button click event.
+        /// Validates input, compresses the image, and saves it in the specified format.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
         private void transfer_Click(object sender, EventArgs e)
         {
-            // Validace vstupních údajů
+            // Validate input data
             if (!ValidateInput())
             {
                 return;
@@ -99,32 +120,29 @@ namespace Transfer_IMG
 
             try
             {
-                // Získání výstupního formátu a kvality
+                // Get output format and quality
                 string outputFormat = comboBox1.SelectedItem.ToString().ToLower();
                 byte quality = byte.Parse(comboBox2.Text);
 
-                // Načtení obrázku
+                // Load image
                 Bitmap originalImage = new Bitmap(Path.Text);
                 common.ProgressBarLoading(10, progressBar1);
 
-                
-
-                // Komprimace obrázku
+                // Compress image
                 MemoryStream memoryStream = CompressImage(originalImage, quality);
                 common.ProgressBarLoading(10, progressBar1);
 
-                // Získání cesty k výstupnímu souboru
+                // Get output file path
                 string outputFilePath = GetOutputFilePath(outputFormat);
                 common.ProgressBarLoading(10, progressBar1);
 
-                // Uložení komprimovaného obrázku
+                // Save compressed image
                 SaveCompressedImage(memoryStream, outputFilePath);
                 common.ProgressBarLoading(70, progressBar1);
-
             }
             catch (Exception ex)
             {
-                // Zobrazení chybové zprávy
+                // Display error message
                 MessageBox.Show("Nastala chyba při převodu: " + ex.Message);
             }
             finally
@@ -135,7 +153,10 @@ namespace Transfer_IMG
             }
         }
 
-        // Metoda pro validaci vstupních údajů
+        /// <summary>
+        /// Validates input data for the image transfer process.
+        /// </summary>
+        /// <returns><c>true</c> if all input data is valid; otherwise, <c>false</c>.</returns>
         private bool ValidateInput()
         {
             if (System.IO.Path.GetExtension(Path.Text).Equals("." + comboBox1.Text, StringComparison.OrdinalIgnoreCase))
@@ -171,7 +192,12 @@ namespace Transfer_IMG
             return true;
         }
 
-        // Metoda pro kompresi obrázku
+        /// <summary>
+        /// Compresses the given image with the specified quality.
+        /// </summary>
+        /// <param name="originalImage">The image to compress.</param>
+        /// <param name="quality">The quality of the compressed image (0-100).</param>
+        /// <returns>A <see cref="MemoryStream"/> containing the compressed image data.</returns>
         private MemoryStream CompressImage(Bitmap originalImage, byte quality)
         {
             using (MemoryStream memoryStream = new MemoryStream())
@@ -190,37 +216,58 @@ namespace Transfer_IMG
             }
         }
 
-        // Metoda pro získání cesty k výstupnímu souboru
+        /// <summary>
+        /// Gets the path for the output file based on the selected format and folder.
+        /// </summary>
+        /// <param name="outputFormat">The format to save the image in.</param>
+        /// <returns>The path for the output file.</returns>
         private string GetOutputFilePath(string outputFormat)
         {
             string directory = checkBox1.Checked ? System.IO.Path.GetDirectoryName(Path.Text) : FolderPath.Text;
             return System.IO.Path.Combine(directory, System.IO.Path.GetFileNameWithoutExtension(Path.Text) + "." + outputFormat);
         }
 
-        // Metoda pro uložení komprimovaného obrázku
+        /// <summary>
+        /// Saves the compressed image data to a file.
+        /// </summary>
+        /// <param name="memoryStream">The <see cref="MemoryStream"/> containing the compressed image data.</param>
+        /// <param name="outputPath">The path where the image should be saved.</param>
         private void SaveCompressedImage(MemoryStream memoryStream, string outputPath)
         {
             File.WriteAllBytes(outputPath, memoryStream.ToArray());
         }
 
-        // Metoda pro získání encoderu pro daný formát
+        /// <summary>
+        /// Gets the image codec info for the specified image format.
+        /// </summary>
+        /// <param name="format">The <see cref="ImageFormat"/> for which to get the codec info.</param>
+        /// <returns>The <see cref="ImageCodecInfo"/> for the specified format.</returns>
         private ImageCodecInfo GetEncoder(ImageFormat format)
         {
             return Array.Find(ImageCodecInfo.GetImageDecoders(), codec => codec.FormatID == format.Guid);
         }
 
-        // Handler pro změnu stavu checkBoxu - zobrazení/skrytí výběru složky
+        /// <summary>
+        /// Event handler for the <c>checkBox1</c> checked changed event.
+        /// Shows or hides the folder path selection controls based on the checkbox state.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> containing event data.</param>
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             FolderPath.Visible = Choose.Visible = !checkBox1.Checked;
         }
 
-        // Handler pro tlačítko výběru složky
+        /// <summary>
+        /// Event handler for the <c>Choose</c> button click event.
+        /// Opens a folder picker dialog to select the folder for saving the image.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> containing event data.</param>
         private void Choose_Click(object sender, EventArgs e)
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
-
                 openFileDialog.ValidateNames = false;
                 openFileDialog.CheckFileExists = false;
                 openFileDialog.CheckPathExists = true;

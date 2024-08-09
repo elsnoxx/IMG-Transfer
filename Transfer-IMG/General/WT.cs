@@ -9,6 +9,9 @@ using System.Globalization;
 
 namespace Transfer_IMG.General
 {
+    /// <summary>
+    /// A utility class that provides color schema and settings.
+    /// </summary>
     public sealed class WT
     {
         // Color schema
