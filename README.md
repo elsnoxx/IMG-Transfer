@@ -1,45 +1,53 @@
-# IMGTransfer - Aplikace pro práci s obrázky
+# IMGTransfer - Image Handling Application
 
-Tato aplikace umožňuje uživatelům komprimovat obrázky do formátů JPEG nebo PNG s nastavitelnou kvalitou. Podporuje jak výběr souboru přes dialogové okno, tak i přetažení souboru přímo do aplikace.
+This application allows users to handle images in various ways, including resizing, compressing, and converting between formats. It supports working with image files via both file selection and drag-and-drop. New features include resizing images before exporting them as SVG and converting QR codes directly to various formats.
 
-## Funkce aplikace
+![APP](/Navrhy/vzhled.png)
 
-- **Výběr obrázku:** Uživatel může vybrat obrázek buď přes tlačítko pro výběr souboru, nebo jej přetažením do okna aplikace.
-- **Komprese obrázku:** Podpora komprese do formátů JPEG a PNG s nastavením kvality.
-- **Výběr výstupního adresáře:** Možnost zvolit cílový adresář pro uložení komprimovaného obrázku.
-- **Zobrazení pokroku:** Proces komprese je vizualizován pomocí progress baru.
-- **Jednoduché ovládání:** Intuitivní uživatelské rozhraní ve Windows Forms.
-- **Převod JPG do PDF:** Umožňuje převést obrázek ve formátu JPG do PDF.
-- **Převod PDF do JPG:** Umožňuje převést stránky PDF dokumentu do obrázků ve formátu JPG.
-- **Generování QR kódu:** Umožňuje vygenerovaný QR kód i se specialními znaky.
-- **Export QR kódu jako SVG a PNG:** Umožňuje uložit vygenerovaný QR kód jako SVG a PNG soubor.
+## Features
+
+- **Image Selection:** Users can choose an image either through a file selection button or by dragging and dropping the file directly into the application window.
+- **Image Compression:** Supports compression into JPEG and PNG formats with adjustable quality settings.
+- **Image Resizing:** Allows resizing images before saving them to different formats.
+- **Export to SVG:** Enables saving resized images as SVG files, accommodating different sizes.
+- **Output Directory Selection:** Option to select the target directory for saving the processed image.
+- **Progress Display:** Visualizes the processing progress with a progress bar.
+- **Simple Operation:** Intuitive user interface in Windows Forms.
+- **JPG to PDF Conversion:** Converts JPG images to PDF files.
+- **PDF to JPG Conversion:** Converts PDF document pages to JPG images.
+- **QR Code Generation:** Generates QR codes with customizable sizes and special characters.
+- **Export QR Code as SVG and PNG:** Allows saving the generated QR code as both SVG and PNG files with adjustable size.
+
+## Installation and Running
+
+### Requirements
+
+- Windows operating system (7 and newer)
+- .NET Framework 4.8.0 (or newer)
+
+### Installation
+
+1. **Download the Application:** Download the installer package from the following link: [Download IMGTransfer Setup](/IMG-Transfer/Release/IMG-Transfer.msi).
+2. **Run the Installer:** Start the application by double-clicking the `IMG-Transfer.msi` file.
+
+### Usage
+
+1. **Image Selection:** Click the "Select File" button or drag and drop a file directly into the application window.
+2. **Format and Quality Settings:** Choose the format (JPEG or PNG) and set the compression quality.
+3. **Image Resizing:** Input the desired width and height to resize the image before saving.
+4. **Compression:** Click the "Convert Image" button and wait for the image to be processed and compressed.
+5. **Saving:** The processed image will be saved to the selected directory.
+6. **JPG to PDF Conversion:** Select a JPG image, set the output directory, and click "Convert to PDF."
+7. **PDF to JPG Conversion:** Select a PDF document, set the output directory, and click "Convert to JPG."
+8. **Export QR Code as SVG:** Generate a QR code with specified size, and choose the "Save as SVG" option to export it.
+
+## Support and Contact
+
+For issues or inquiries, please contact our support team at ficek.risa@gmail.com or visit my website [www.elsnoxx.github.io](https://elsnoxx.github.io/contact.html).
+
+© 2024 Richard Ficek. All rights reserved.
 
 
-## Instalace a spuštění
-
-### Požadavky
-
-- Operační systém Windows (7 a novější)
-- .NET Framework 4.8.0 (nebo novější)
-
-### Instalace
-
-1. Stažení aplikace: Stažte si instalační balíček z následujícího odkazu: [Stáhnout IMGTransfer Setup](/IMG-Transfer/Release/IMG-Transfer.msi).
-2. Spuštění: Spusťte aplikaci dvojitým kliknutím na soubor `IMG-Transfer.msi`.
-
-### Použití
-
-1. **Výběr obrázku:** Klikněte na tlačítko "Vybrat soubor" nebo přetáhněte soubor přímo do okna aplikace.
-2. **Nastavení formátu a kvality:** Vyberte formát (JPEG nebo PNG) a kvalitu komprese.
-3. **Komprese:** Klikněte na tlačítko "Převést obrázek" a počkejte, dokud se obrázek nezkomprimuje.
-4. **Uložení:** Komprimovaný obrázek se uloží do vybraného adresáře.
-5. **Převod JPG do PDF:** Vyberte JPG obrázek, nastavte výstupní adresář a klikněte na "Převést do PDF".
-6. **Převod PDF do JPG:** Vyberte PDF dokument, nastavte výstupní adresář a klikněte na "Převést do JPG".
-7. **Export QR kódu jako SVG:** Vygenerujte QR kód a zvolte možnost "Uložit jako SVG".
-
-## Podpora a kontakt
-
-V případě potíží nebo dotazů kontaktujte náš tým podpory na ficek.risa@gmail.com nebo navštivte mé webové stránky [www.elsnoxx.github.io](https://elsnoxx.github.io/contact.html).
 
 ## Work-in progress
 
@@ -53,4 +61,3 @@ V případě potíží nebo dotazů kontaktujte náš tým podpory na ficek.risa
 - Nastavení aplikace = zmena barevného rezimu, oblibena stranka
 
 ---
-© 2024 Richard Ficek. Všechna práva vyhrazena.
