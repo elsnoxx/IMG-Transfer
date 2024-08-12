@@ -11,7 +11,7 @@ namespace Transfer_IMG.General
         /// </summary>
         /// <param name="length">The number of steps to simulate.</param>
         /// <param name="progressBar">The ProgressBar control to update.</param>
-        public async Task ProgressBarLoadingAsync(int length, ProgressBar progressBar)
+        public async Task ProgressBarLoading(int length, ProgressBar progressBar)
         {
             // Ensure the ProgressBar value is within the valid range
             progressBar.Minimum = 0;
