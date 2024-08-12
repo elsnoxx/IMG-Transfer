@@ -111,47 +111,100 @@ namespace Transfer_IMG
             // Validate input data
             if (!ValidateInput())
             {
-                return;
+                return; // Exit if input validation fails
             }
 
+            // Check file extension to determine the transfer type
+            if (System.IO.Path.GetExtension(Path.Text).Equals(".pdf", StringComparison.OrdinalIgnoreCase))
+            {
+                // Handle PDF transfer
+                PDFtransfer();
+            }
+            else
+            {
+                // Handle image transfer
+                IMGtransfer();
+            }
+        }
+
+        /// <summary>
+        /// Handles the image transfer process.
+        /// Compresses the image based on user settings and saves it in the specified format.
+        /// </summary>
+        private void IMGtransfer()
+        {
+            // Hide error label and show progress bar
             label5.Visible = false;
             progressBar1.Visible = true;
-            progressBar1.Value = 10;
+            progressBar1.Value = 10; // Initial progress value
 
             try
             {
-                // Get output format and quality
+                // Retrieve output format and quality settings from user input
                 string outputFormat = comboBox1.SelectedItem.ToString().ToLower();
                 byte quality = byte.Parse(comboBox2.Text);
 
-                // Load image
+                // Load the original image from the specified path
                 Bitmap originalImage = new Bitmap(Path.Text);
-                common.ProgressBarLoading(10, progressBar1);
+                common.ProgressBarLoading(10, progressBar1); // Simulate progress
 
-                // Compress image
+                // Compress the image and store it in a memory stream
                 MemoryStream memoryStream = CompressImage(originalImage, quality);
-                common.ProgressBarLoading(10, progressBar1);
+                common.ProgressBarLoading(10, progressBar1); // Simulate progress
 
-                // Get output file path
+                // Get the file path where the compressed image will be saved
                 string outputFilePath = GetOutputFilePath(outputFormat);
-                common.ProgressBarLoading(10, progressBar1);
+                common.ProgressBarLoading(10, progressBar1); // Simulate progress
 
-                // Save compressed image
+                // Save the compressed image to the specified path
                 SaveCompressedImage(memoryStream, outputFilePath);
-                common.ProgressBarLoading(70, progressBar1);
+                common.ProgressBarLoading(70, progressBar1); // Simulate progress
             }
             catch (Exception ex)
             {
-                // Display error message
+                // Display error message if an exception occurs
                 MessageBox.Show("Nastala chyba při převodu: " + ex.Message);
             }
             finally
             {
+                // Hide progress bar and show the error label
                 progressBar1.Visible = false;
-                progressBar1.Value = 0;
+                progressBar1.Value = 0; // Reset progress bar
                 label5.Visible = true;
             }
         }
+
+        /// <summary>
+        /// Handles the PDF transfer process.
+        /// This method should be implemented to handle PDF file processing.
+        /// </summary>
+        private void PDFtransfer()
+        {
+            // Hide error label and show progress bar
+            label5.Visible = false;
+            progressBar1.Visible = true;
+            progressBar1.Value = 10; // Initial progress value
+
+            try
+            {
+                // Implement the PDF transfer logic here
+
+            }
+            catch (Exception ex)
+            {
+                // Display error message if an exception occurs
+                MessageBox.Show("Nastala chyba při převodu: " + ex.Message);
+            }
+            finally
+            {
+                // Hide progress bar and show the error label
+                progressBar1.Visible = false;
+                progressBar1.Value = 0; // Reset progress bar
+                label5.Visible = true;
+            }
+        }
+
+
 
         /// <summary>
         /// Validates input data for the image transfer process.

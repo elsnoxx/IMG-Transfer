@@ -166,7 +166,7 @@
             this.JPGtoPDF.Name = "JPGtoPDF";
             this.JPGtoPDF.Size = new System.Drawing.Size(176, 40);
             this.JPGtoPDF.TabIndex = 1;
-            this.JPGtoPDF.Text = "       JPG to PDF";
+            this.JPGtoPDF.Text = "             Převod do PDF";
             this.JPGtoPDF.UseVisualStyleBackColor = false;
             this.JPGtoPDF.Click += new System.EventHandler(this.JPGtoPDF_Click);
             // 
@@ -184,7 +184,7 @@
             this.btnTransferIMG.Name = "btnTransferIMG";
             this.btnTransferIMG.Size = new System.Drawing.Size(176, 40);
             this.btnTransferIMG.TabIndex = 0;
-            this.btnTransferIMG.Text = "        Převod obrázku";
+            this.btnTransferIMG.Text = "Převod obrázku";
             this.btnTransferIMG.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnTransferIMG.UseVisualStyleBackColor = false;
             this.btnTransferIMG.Click += new System.EventHandler(this.btnTransferIMG_Click);

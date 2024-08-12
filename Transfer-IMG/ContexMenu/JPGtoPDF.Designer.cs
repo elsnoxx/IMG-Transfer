@@ -148,9 +148,9 @@ namespace Transfer_IMG
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(26, 389);
+            this.progressBar1.Location = new System.Drawing.Point(42, 389);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(701, 21);
+            this.progressBar1.Size = new System.Drawing.Size(658, 21);
             this.progressBar1.TabIndex = 34;
             this.progressBar1.Visible = false;
             // 

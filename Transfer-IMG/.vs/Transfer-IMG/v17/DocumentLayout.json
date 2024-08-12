@@ -3,36 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\admin\\Documents\\GitHub\\IMG-Transfer\\Transfer-IMG\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0B37B1F4-AFF0-4084-BD88-D7FBEF20CD5C}|Transfer-IMG.csproj|C:\\Users\\admin\\Documents\\GitHub\\IMG-Transfer\\Transfer-IMG\\popup\\qrdownload.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0B37B1F4-AFF0-4084-BD88-D7FBEF20CD5C}|Transfer-IMG.csproj|solutionrelative:popup\\qrdownload.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0B37B1F4-AFF0-4084-BD88-D7FBEF20CD5C}|Transfer-IMG.csproj|c:\\users\\admin\\documents\\github\\img-transfer\\transfer-img\\contexmenu\\imgtransfer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B37B1F4-AFF0-4084-BD88-D7FBEF20CD5C}|Transfer-IMG.csproj|solutionrelative:contexmenu\\imgtransfer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0B37B1F4-AFF0-4084-BD88-D7FBEF20CD5C}|Transfer-IMG.csproj|C:\\Users\\admin\\Documents\\GitHub\\IMG-Transfer\\Transfer-IMG\\popup\\qrdownload.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0B37B1F4-AFF0-4084-BD88-D7FBEF20CD5C}|Transfer-IMG.csproj|solutionrelative:popup\\qrdownload.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0B37B1F4-AFF0-4084-BD88-D7FBEF20CD5C}|Transfer-IMG.csproj|C:\\Users\\admin\\Documents\\GitHub\\IMG-Transfer\\Transfer-IMG\\contexmenu\\qrcodes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0B37B1F4-AFF0-4084-BD88-D7FBEF20CD5C}|Transfer-IMG.csproj|solutionrelative:contexmenu\\qrcodes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0B37B1F4-AFF0-4084-BD88-D7FBEF20CD5C}|Transfer-IMG.csproj|C:\\Users\\admin\\Documents\\GitHub\\IMG-Transfer\\Transfer-IMG\\contexmenu\\qrcodes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0B37B1F4-AFF0-4084-BD88-D7FBEF20CD5C}|Transfer-IMG.csproj|solutionrelative:contexmenu\\qrcodes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0B37B1F4-AFF0-4084-BD88-D7FBEF20CD5C}|Transfer-IMG.csproj|C:\\Users\\admin\\Documents\\GitHub\\IMG-Transfer\\Transfer-IMG\\mainwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0B37B1F4-AFF0-4084-BD88-D7FBEF20CD5C}|Transfer-IMG.csproj|solutionrelative:mainwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{0B37B1F4-AFF0-4084-BD88-D7FBEF20CD5C}|Transfer-IMG.csproj|c:\\users\\admin\\documents\\github\\img-transfer\\transfer-img\\contexmenu\\imgtransfer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0B37B1F4-AFF0-4084-BD88-D7FBEF20CD5C}|Transfer-IMG.csproj|solutionrelative:contexmenu\\imgtransfer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0B37B1F4-AFF0-4084-BD88-D7FBEF20CD5C}|Transfer-IMG.csproj|c:\\users\\admin\\documents\\github\\img-transfer\\transfer-img\\contexmenu\\jpgtopdf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0B37B1F4-AFF0-4084-BD88-D7FBEF20CD5C}|Transfer-IMG.csproj|solutionrelative:contexmenu\\jpgtopdf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0B37B1F4-AFF0-4084-BD88-D7FBEF20CD5C}|Transfer-IMG.csproj|c:\\users\\admin\\documents\\github\\img-transfer\\transfer-img\\mainwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0B37B1F4-AFF0-4084-BD88-D7FBEF20CD5C}|Transfer-IMG.csproj|solutionrelative:mainwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0B37B1F4-AFF0-4084-BD88-D7FBEF20CD5C}|Transfer-IMG.csproj|C:\\Users\\admin\\Documents\\GitHub\\IMG-Transfer\\Transfer-IMG\\popup\\aboutbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0B37B1F4-AFF0-4084-BD88-D7FBEF20CD5C}|Transfer-IMG.csproj|solutionrelative:popup\\aboutbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,106 +22,44 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "JPGtoPDF.cs",
               "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\IMG-Transfer\\Transfer-IMG\\ContexMenu\\JPGtoPDF.cs",
               "RelativeDocumentMoniker": "ContexMenu\\JPGtoPDF.cs",
               "ToolTip": "C:\\Users\\admin\\Documents\\GitHub\\IMG-Transfer\\Transfer-IMG\\ContexMenu\\JPGtoPDF.cs",
               "RelativeToolTip": "ContexMenu\\JPGtoPDF.cs",
-              "ViewState": "AQIAAGAAAAAAAAAAAAAmwIUAAAARAAAA",
+              "ViewState": "AQIAAI8AAAAAAAAAAAAuwKQAAAA5AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-09T07:00:53.406Z",
+              "WhenOpened": "2024-08-12T07:22:02.457Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "AboutBox.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\IMG-Transfer\\Transfer-IMG\\Popup\\AboutBox.cs",
-              "RelativeDocumentMoniker": "Popup\\AboutBox.cs",
-              "ToolTip": "C:\\Users\\admin\\Documents\\GitHub\\IMG-Transfer\\Transfer-IMG\\Popup\\AboutBox.cs [Design]",
-              "RelativeToolTip": "Popup\\AboutBox.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-08T12:26:28.763Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MainWindow.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\IMG-Transfer\\Transfer-IMG\\MainWindow.cs",
-              "RelativeDocumentMoniker": "MainWindow.cs",
-              "ToolTip": "C:\\Users\\admin\\Documents\\GitHub\\IMG-Transfer\\Transfer-IMG\\MainWindow.cs",
-              "RelativeToolTip": "MainWindow.cs",
-              "ViewState": "AQIAAEEAAAAAAAAAAAAuwCUAAAA/AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-08T08:58:55.066Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MainWindow.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\IMG-Transfer\\Transfer-IMG\\MainWindow.cs",
-              "RelativeDocumentMoniker": "MainWindow.cs",
-              "ToolTip": "C:\\Users\\admin\\Documents\\GitHub\\IMG-Transfer\\Transfer-IMG\\MainWindow.cs [Design]",
-              "RelativeToolTip": "MainWindow.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-08T08:58:51.87Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "QRdownload.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\IMG-Transfer\\Transfer-IMG\\Popup\\QRdownload.cs",
-              "RelativeDocumentMoniker": "Popup\\QRdownload.cs",
-              "ToolTip": "C:\\Users\\admin\\Documents\\GitHub\\IMG-Transfer\\Transfer-IMG\\Popup\\QRdownload.cs [Design]",
-              "RelativeToolTip": "Popup\\QRdownload.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-08T08:57:26.669Z",
-              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "QRdownload.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\IMG-Transfer\\Transfer-IMG\\Popup\\QRdownload.cs",
-              "RelativeDocumentMoniker": "Popup\\QRdownload.cs",
-              "ToolTip": "C:\\Users\\admin\\Documents\\GitHub\\IMG-Transfer\\Transfer-IMG\\Popup\\QRdownload.cs",
-              "RelativeToolTip": "Popup\\QRdownload.cs",
-              "ViewState": "AQIAAKQAAAAAAAAAAAAUwMcAAAA0AAAA",
+              "Title": "IMGTransfer.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\IMG-Transfer\\Transfer-IMG\\ContexMenu\\IMGTransfer.cs",
+              "RelativeDocumentMoniker": "ContexMenu\\IMGTransfer.cs",
+              "ToolTip": "C:\\Users\\admin\\Documents\\GitHub\\IMG-Transfer\\Transfer-IMG\\ContexMenu\\IMGTransfer.cs",
+              "RelativeToolTip": "ContexMenu\\IMGTransfer.cs",
+              "ViewState": "AQIAAEAAAAAAAAAAAAAmwL0AAAA4AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-08T09:08:58.198Z",
+              "WhenOpened": "2024-08-12T06:36:26.375Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "QRcodes.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\IMG-Transfer\\Transfer-IMG\\ContexMenu\\QRcodes.cs",
-              "RelativeDocumentMoniker": "ContexMenu\\QRcodes.cs",
-              "ToolTip": "C:\\Users\\admin\\Documents\\GitHub\\IMG-Transfer\\Transfer-IMG\\ContexMenu\\QRcodes.cs",
-              "RelativeToolTip": "ContexMenu\\QRcodes.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAiwG0AAAAAAAAA",
+              "DocumentIndex": 1,
+              "Title": "IMGTransfer.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\IMG-Transfer\\Transfer-IMG\\ContexMenu\\IMGTransfer.cs",
+              "RelativeDocumentMoniker": "ContexMenu\\IMGTransfer.cs",
+              "ToolTip": "C:\\Users\\admin\\Documents\\GitHub\\IMG-Transfer\\Transfer-IMG\\ContexMenu\\IMGTransfer.cs [Design]",
+              "RelativeToolTip": "ContexMenu\\IMGTransfer.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-08T08:57:32.296Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "QRcodes.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\IMG-Transfer\\Transfer-IMG\\ContexMenu\\QRcodes.cs",
-              "RelativeDocumentMoniker": "ContexMenu\\QRcodes.cs",
-              "ToolTip": "C:\\Users\\admin\\Documents\\GitHub\\IMG-Transfer\\Transfer-IMG\\ContexMenu\\QRcodes.cs [Design]",
-              "RelativeToolTip": "ContexMenu\\QRcodes.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-08T08:56:40.106Z",
+              "WhenOpened": "2024-08-12T06:28:31.121Z",
               "EditorCaption": " [Design]"
             }
           ]
