@@ -1,15 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Reflection.Emit;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using PdfSharp.Drawing;
 using PdfSharp.Pdf;
+using Transfer_IMG.General;
 
 namespace Transfer_IMG
 {
@@ -19,6 +12,8 @@ namespace Transfer_IMG
     /// </summary>
     public partial class JPGtoPDF : UserControl
     {
+        private Common common;
+
         /// <summary>
         /// Initializes a new instance of the <see cref="JPGtoPDF"/> class.
         /// Sets up drag-and-drop functionality for file selection.
@@ -27,6 +22,7 @@ namespace Transfer_IMG
         {
             InitializeComponent();
             SetupDragAndDrop();
+            common = new Common();
         }
 
         /// <summary>
@@ -143,6 +139,8 @@ namespace Transfer_IMG
 
             string imagePath = Path.Text;
             string pdfPath = "";
+            progressBar1.Visible = true;
+            progressBar1.Value = 10;
 
             // Determine output PDF path based on checkbox state
             if (!checkBox1.Checked)
@@ -153,28 +151,46 @@ namespace Transfer_IMG
             {
                 pdfPath = System.IO.Path.ChangeExtension(imagePath, ".pdf");
             }
-
+            common.ProgressBarLoading(10, progressBar1);
             try
             {
                 using (PdfDocument document = new PdfDocument())
                 {
                     PdfPage page = document.AddPage();
+                    if (!PageOrientation.Checked)
+                    {
+                        page.Orientation = PdfSharp.PageOrientation.Landscape;
+                    }
+                    common.ProgressBarLoading(10, progressBar1);
                     XGraphics gfx = XGraphics.FromPdfPage(page);
                     XImage img = XImage.FromFile(imagePath);
 
-                    // Center the image on the page
-                    double x = (page.Width - img.PixelWidth * 72 / img.HorizontalResolution) / 2;
-                    double y = (page.Height - img.PixelHeight * 72 / img.VerticalResolution) / 2;
+                    // Calculate the scaling factor to fit the image on the PDF page
+                    double scaleFactor = Math.Min(page.Width / img.PixelWidth, page.Height / img.PixelHeight);
 
-                    gfx.DrawImage(img, x, y, img.PixelWidth * 72 / img.HorizontalResolution, img.PixelHeight * 72 / img.VerticalResolution);
+                    // Calculate the new dimensions of the image
+                    double scaledWidth = img.PixelWidth * scaleFactor;
+                    double scaledHeight = img.PixelHeight * scaleFactor;
+
+                    // Center the image on the page
+                    double x = (page.Width - scaledWidth) / 2;
+                    double y = (page.Height - scaledHeight) / 2;
+                    common.ProgressBarLoading(10, progressBar1);
+                    gfx.DrawImage(img, x, y, scaledWidth, scaledHeight);
 
                     document.Save(pdfPath);
+                    common.ProgressBarLoading(60, progressBar1);
                 }
                 label5.Visible = true;
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error generating PDF: " + ex.Message);
+            }
+            finally
+            {
+                progressBar1.Visible = false;
+                progressBar1.Value = 0;
             }
         }
 

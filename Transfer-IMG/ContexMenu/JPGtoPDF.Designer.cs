@@ -39,6 +39,7 @@ namespace Transfer_IMG
             this.btnPDFGen = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.PageOrientation = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label4
@@ -153,10 +154,22 @@ namespace Transfer_IMG
             this.progressBar1.TabIndex = 34;
             this.progressBar1.Visible = false;
             // 
+            // PageOrientation
+            // 
+            this.PageOrientation.AutoSize = true;
+            this.PageOrientation.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.PageOrientation.Location = new System.Drawing.Point(42, 156);
+            this.PageOrientation.Name = "PageOrientation";
+            this.PageOrientation.Size = new System.Drawing.Size(111, 22);
+            this.PageOrientation.TabIndex = 36;
+            this.PageOrientation.Text = "Horizontálně";
+            this.PageOrientation.UseVisualStyleBackColor = true;
+            // 
             // JPGtoPDF
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.PageOrientation);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.btnPDFGen);
@@ -191,5 +204,6 @@ namespace Transfer_IMG
         private Button btnPDFGen;
         private Label label5;
         private ProgressBar progressBar1;
+        private CheckBox PageOrientation;
     }
 }
