@@ -32,6 +32,7 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.mainPanel = new System.Windows.Forms.Panel();
             this.menuPanel = new System.Windows.Forms.Panel();
+            this.dochazka = new System.Windows.Forms.Button();
             this.about = new System.Windows.Forms.PictureBox();
             this.language = new System.Windows.Forms.Label();
             this.QRcodes = new System.Windows.Forms.Button();
@@ -63,6 +64,7 @@
             // menuPanel
             // 
             this.menuPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.menuPanel.Controls.Add(this.dochazka);
             this.menuPanel.Controls.Add(this.about);
             this.menuPanel.Controls.Add(this.language);
             this.menuPanel.Controls.Add(this.QRcodes);
@@ -74,6 +76,24 @@
             this.menuPanel.Name = "menuPanel";
             this.menuPanel.Size = new System.Drawing.Size(176, 528);
             this.menuPanel.TabIndex = 2;
+            // 
+            // dochazka
+            // 
+            this.dochazka.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.dochazka.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dochazka.FlatAppearance.BorderSize = 0;
+            this.dochazka.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.dochazka.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.dochazka.ForeColor = System.Drawing.Color.White;
+            this.dochazka.Image = ((System.Drawing.Image)(resources.GetObject("dochazka.Image")));
+            this.dochazka.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.dochazka.Location = new System.Drawing.Point(0, 230);
+            this.dochazka.Name = "dochazka";
+            this.dochazka.Size = new System.Drawing.Size(176, 40);
+            this.dochazka.TabIndex = 6;
+            this.dochazka.Text = "  Dochazka";
+            this.dochazka.UseVisualStyleBackColor = false;
+            this.dochazka.Click += new System.EventHandler(this.dochazka_Click);
             // 
             // about
             // 
@@ -222,5 +242,6 @@
         private System.Windows.Forms.Button QRcodes;
         private System.Windows.Forms.Label language;
         private System.Windows.Forms.PictureBox about;
+        private System.Windows.Forms.Button dochazka;
     }
 }

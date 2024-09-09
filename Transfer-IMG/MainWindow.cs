@@ -91,6 +91,17 @@ namespace Transfer_IMG
         }
 
         /// <summary>
+        /// Event handler for the <c>QRcodes</c> button click event.
+        /// Highlights the clicked button and loads the <see cref="Dochazka"/> control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        private void dochazka_Click(object sender, EventArgs e)
+        {
+            Highlight(sender);
+            LoadControl(new Dochazka());
+        }
+
+        /// <summary>
         /// Loads the specified <see cref="UserControl"/> into the main panel.
         /// Clears any existing controls and sets the new control to fill the panel.
         /// </summary>
@@ -101,6 +112,8 @@ namespace Transfer_IMG
             userControl.Dock = DockStyle.Fill;
             mainPanel.Controls.Add(userControl);
         }
+
+        
 
         /// <summary>
         /// Highlights the clicked button by changing its background color.
@@ -153,5 +166,7 @@ namespace Transfer_IMG
             AboutBox aboutBox = new AboutBox();
             aboutBox.ShowDialog();
         }
+
+        
     }
 }

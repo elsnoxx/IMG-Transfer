@@ -1,18 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\admin\\Documents\\GitHub\\IMG-Transfer\\Transfer-IMG\\",
+  "WorkspaceRootPath": "C:\\Users\\ficek\\Documents\\GitHub\\IMG-Transfer\\Transfer-IMG\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0B37B1F4-AFF0-4084-BD88-D7FBEF20CD5C}|Transfer-IMG.csproj|c:\\users\\admin\\documents\\github\\img-transfer\\transfer-img\\contexmenu\\imgtransfer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0B37B1F4-AFF0-4084-BD88-D7FBEF20CD5C}|Transfer-IMG.csproj|solutionrelative:contexmenu\\imgtransfer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0B37B1F4-AFF0-4084-BD88-D7FBEF20CD5C}|Transfer-IMG.csproj|c:\\users\\ficek\\documents\\github\\img-transfer\\transfer-img\\contexmenu\\dochazka.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0B37B1F4-AFF0-4084-BD88-D7FBEF20CD5C}|Transfer-IMG.csproj|solutionrelative:contexmenu\\dochazka.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0B37B1F4-AFF0-4084-BD88-D7FBEF20CD5C}|Transfer-IMG.csproj|c:\\users\\admin\\documents\\github\\img-transfer\\transfer-img\\contexmenu\\imgtransfer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0B37B1F4-AFF0-4084-BD88-D7FBEF20CD5C}|Transfer-IMG.csproj|solutionrelative:contexmenu\\imgtransfer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{0B37B1F4-AFF0-4084-BD88-D7FBEF20CD5C}|Transfer-IMG.csproj|c:\\users\\ficek\\documents\\github\\img-transfer\\transfer-img\\contexmenu\\dochazka.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B37B1F4-AFF0-4084-BD88-D7FBEF20CD5C}|Transfer-IMG.csproj|solutionrelative:contexmenu\\dochazka.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0B37B1F4-AFF0-4084-BD88-D7FBEF20CD5C}|Transfer-IMG.csproj|c:\\users\\admin\\documents\\github\\img-transfer\\transfer-img\\contexmenu\\jpgtopdf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0B37B1F4-AFF0-4084-BD88-D7FBEF20CD5C}|Transfer-IMG.csproj|solutionrelative:contexmenu\\jpgtopdf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0B37B1F4-AFF0-4084-BD88-D7FBEF20CD5C}|Transfer-IMG.csproj|c:\\users\\ficek\\documents\\github\\img-transfer\\transfer-img\\contexmenu\\qrcodes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0B37B1F4-AFF0-4084-BD88-D7FBEF20CD5C}|Transfer-IMG.csproj|solutionrelative:contexmenu\\qrcodes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,45 +22,44 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "JPGtoPDF.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\IMG-Transfer\\Transfer-IMG\\ContexMenu\\JPGtoPDF.cs",
-              "RelativeDocumentMoniker": "ContexMenu\\JPGtoPDF.cs",
-              "ToolTip": "C:\\Users\\admin\\Documents\\GitHub\\IMG-Transfer\\Transfer-IMG\\ContexMenu\\JPGtoPDF.cs",
-              "RelativeToolTip": "ContexMenu\\JPGtoPDF.cs",
-              "ViewState": "AQIAAI8AAAAAAAAAAAAuwKQAAAA5AAAA",
+              "Title": "QRcodes.cs [N\u00E1vrh]",
+              "DocumentMoniker": "C:\\Users\\ficek\\Documents\\GitHub\\IMG-Transfer\\Transfer-IMG\\ContexMenu\\QRcodes.cs",
+              "RelativeDocumentMoniker": "ContexMenu\\QRcodes.cs",
+              "ToolTip": "C:\\Users\\ficek\\Documents\\GitHub\\IMG-Transfer\\Transfer-IMG\\ContexMenu\\QRcodes.cs [N\u00E1vrh]",
+              "RelativeToolTip": "ContexMenu\\QRcodes.cs [N\u00E1vrh]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-12T07:22:02.457Z",
+              "WhenOpened": "2024-09-09T16:58:09.969Z",
+              "EditorCaption": " [N\u00E1vrh]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Dochazka.cs",
+              "DocumentMoniker": "C:\\Users\\ficek\\Documents\\GitHub\\IMG-Transfer\\Transfer-IMG\\ContexMenu\\Dochazka.cs",
+              "RelativeDocumentMoniker": "ContexMenu\\Dochazka.cs",
+              "ToolTip": "C:\\Users\\ficek\\Documents\\GitHub\\IMG-Transfer\\Transfer-IMG\\ContexMenu\\Dochazka.cs",
+              "RelativeToolTip": "ContexMenu\\Dochazka.cs",
+              "ViewState": "AgIAAK0AAAAAAAAAAAAIwM8AAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-09T13:27:53.788Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "IMGTransfer.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\IMG-Transfer\\Transfer-IMG\\ContexMenu\\IMGTransfer.cs",
-              "RelativeDocumentMoniker": "ContexMenu\\IMGTransfer.cs",
-              "ToolTip": "C:\\Users\\admin\\Documents\\GitHub\\IMG-Transfer\\Transfer-IMG\\ContexMenu\\IMGTransfer.cs",
-              "RelativeToolTip": "ContexMenu\\IMGTransfer.cs",
-              "ViewState": "AQIAAEAAAAAAAAAAAAAmwL0AAAA4AAAA",
+              "Title": "Dochazka.cs [N\u00E1vrh]",
+              "DocumentMoniker": "C:\\Users\\ficek\\Documents\\GitHub\\IMG-Transfer\\Transfer-IMG\\ContexMenu\\Dochazka.cs",
+              "RelativeDocumentMoniker": "ContexMenu\\Dochazka.cs",
+              "ToolTip": "C:\\Users\\ficek\\Documents\\GitHub\\IMG-Transfer\\Transfer-IMG\\ContexMenu\\Dochazka.cs [N\u00E1vrh]",
+              "RelativeToolTip": "ContexMenu\\Dochazka.cs [N\u00E1vrh]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-12T06:36:26.375Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IMGTransfer.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\IMG-Transfer\\Transfer-IMG\\ContexMenu\\IMGTransfer.cs",
-              "RelativeDocumentMoniker": "ContexMenu\\IMGTransfer.cs",
-              "ToolTip": "C:\\Users\\admin\\Documents\\GitHub\\IMG-Transfer\\Transfer-IMG\\ContexMenu\\IMGTransfer.cs [Design]",
-              "RelativeToolTip": "ContexMenu\\IMGTransfer.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-12T06:28:31.121Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-09-09T13:25:13.661Z",
+              "EditorCaption": " [N\u00E1vrh]"
             }
           ]
         }
