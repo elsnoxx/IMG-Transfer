@@ -17,6 +17,8 @@ This application allows users to handle images in various ways, including resizi
 - **PDF to JPG Conversion:** Converts PDF document pages to JPG images.
 - **QR Code Generation:** Generates QR codes with customizable sizes and special characters.
 - **Export QR Code as SVG and PNG:** Allows saving the generated QR code as both SVG and PNG files with adjustable size.
+- **Attendance:** Allows you to calculate your attendance or plan your attendance to fit into your working hours.
+- **Attendance to file:** Exports or Import time attendance from excel, excel must be according to the template.
 
 ## Installation and Running
 
